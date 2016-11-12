@@ -1,0 +1,48 @@
+<html>
+<head>
+
+  <title>Virada Cultural</title>
+  <!-- Sets initial viewport load and disables zooming  -->
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+  <!-- Evitar problemas com caracteres latinos -->
+  <meta charset="UTF-8">
+
+  <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <link type="text/css" rel="stylesheet" href="../ratchet-2.0.2/dist/css/ratchet.min.css"/>
+  <script src="../ratchet-2.0.2/dist/js/ratchet.min.js"></script>
+
+  <link rel="stylesheet" href="css/perfil.css" /  >
+</head>
+
+<body>
+<header class="bar bar-nav">
+  <button class="btn pull-left">
+    Left
+  </button>
+  <button class="btn pull-right">
+    Right
+  </button>
+  <h1 class="title">Perfil</h1>
+</header>
+<div class="content">
+  <div class="pic-header">
+    <img class="profile-pic">
+    <span>Júlia Bortolato</span>
+  </div>
+</div>
+</body>
+</html>
+<script>
+  const cssLink = '../ratchet-2.0.2/dist/css/ratchet-theme-#os#.css';
+  var operationalSystem = localStorage.getItem('os');
+  if (['ios', 'android'].indexOf(operationalSystem) >= 0) {
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = cssLink.replace('#os#', operationalSystem);
+    document.head.appendChild(link);
+  }
+</script>
