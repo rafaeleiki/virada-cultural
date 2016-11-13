@@ -4,7 +4,7 @@
     <title>Virada Cultural</title>
     <!-- Sets initial viewport load and disables zooming  -->
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-    
+
     <!-- Evitar problemas com caracteres latinos -->
     <meta charset="UTF-8">
 
@@ -34,13 +34,4 @@
 </div>
 </body>
 </html>
-<script>
-    const cssLink = 'ratchet-2.0.2/dist/css/ratchet-theme-#os#.css';
-    var operationalSystem = localStorage.getItem('os');
-    if (['ios', 'android'].indexOf(operationalSystem) >= 0) {
-        var link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = cssLink.replace('#os#', operationalSystem);
-        document.head.appendChild(link);
-    }
-</script>
+<script src="js/os.js"></script>
