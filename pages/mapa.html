@@ -15,6 +15,45 @@
   <script src="../ratchet-2.0.2/dist/js/ratchet.min.js"></script>
 
     <style>
+                /* Dropdown Button */
+        .dropbtn {
+            cursor: pointer;
+        }
+
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+            position: relative;
+            margin-left: 10%;
+        }
+
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 70%;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #f1f1f1
+        }
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+
         .content {
             background: url("mapa.png") no-repeat center center fixed; 
         -webkit-background-size: cover;
@@ -22,6 +61,7 @@
         -o-background-size: cover;
         background-size: cover;
         } 
+        
 </style> 
     
     
@@ -34,10 +74,25 @@
 </header>
      <div class="content">
           <br>
-          <input type="text" placeholder="Buscar local ou Ponto de Interesse" style="margin-left: 10%; width: 70% ">
-          <button class="btn" style="height: 35px; width: 35px; border-radius: 50%;">
+         <div class="dropdown"> 
+             <input class="dropbtn" type="text" placeholder="Buscar local ou Ponto de Interesse" style=" width: 70% ">
+             <div class="dropdown-content">
+                <a href="#">Banheiro</a>
+                <a href="#">Ambulatório</a>
+                <a href="#">Segurança</a>
+                <a href="#">Lixeira</a>
+                <a href="#">Metrô</a>
+                <a href="#">Ponto de ônibus</a>
+                 <a href="#">Praça de Alimentação</a>
+                <a href="#">Vendedor autônomo</a>
+                <a href="#">PNE</a>
+              </div>
+        
+           <a href="../pages/mapa2.html"><button class="btn" style="display: inline-block; height: 35px; width: 35px; border-radius: 50%;">
                 <span class="icon icon-search"></span>
-          </button>
+          </button></a>
+ </div>
+    </div>
 </body>
 </html>
 <script src="../js/os.js"></script>
