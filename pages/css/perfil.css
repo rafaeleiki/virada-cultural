@@ -1,6 +1,6 @@
 .pic-header {
     padding: 0.5em;
-    background-color: #2ac845;
+    background-color: #F7DC62;
 }
 
 .profile-pic {
@@ -16,6 +16,8 @@
     list-style: none;
     vertical-align: bottom;
 }
+
+
 
 .profile-username {
     font-weight: bold;
