@@ -31,20 +31,25 @@
         <div id="myModalexample" class="modal modal-small">
 
             <p class="content-padded">
-             <h1 style="font-size:20px; color:white;">Adicione um texto ou imagem</h1>
-                    <br>
+            <h1 style="font-size:20px; color:white;">Adicione um texto ou imagem</h1>
+            <br>
             <form>
-                <button class="btn btn-block" style="width:49%; height:65px; display: inline-block;">
-                    <img src="../images/pen.png" height=40px width=40px  opacity=0.5>
-                </button>
-                <button class="btn btn-block" style="width:49%; height:65px; display: inline-block;">
-                    <img src="../images/camera-icon.png" height=40px width=40px>
-                </button>
-                <textarea rows="10"></textarea>
-                <button class="btn btn-link btn-nav pull-right btn-proximo" style="font-size:20px; color:white;">
-                    <b>Próximo</b>
-                    <span class="icon icon-right-nav"></span>
-                </button>
+                <div id="grafitti1" name="grafitti-step">
+                    <button class="btn btn-block btn-acao-grafitti">
+                        <img src="../images/pen.png" height=40px width=40px  opacity=0.5>
+                    </button>
+                    <button class="btn btn-block btn-acao-grafitti">
+                        <img src="../images/camera-icon.png" height=40px width=40px>
+                    </button>
+                    <textarea rows="10"></textarea>
+                    <button class="btn btn-link btn-nav pull-right btn-proximo" onclick="goToStep(2, event)">
+                        <b>Próximo</b>
+                        <span class="icon icon-right-nav"></span>
+                    </button>
+                </div>
+                <div id="grafitti2" name="grafitti-step">
+
+                </div>
             </form>
         </div>
         <br><br> 
@@ -67,3 +72,15 @@
 </body>
 </html>
 <script src="../js/os.js"></script>
+<script>
+    function goToStep(step, event) {
+        event.preventDefault();
+        document.getElementsByName('grafitti-step').forEach(function(element) {
+            if (element.id.indexOf(step) >= 0) {
+                element.style.display = 'block';
+            } else {
+                element.style.display = 'none';
+            }
+        });
+    }
+</script>

@@ -59,7 +59,15 @@
 }
 
 .btn-proximo {
+    font-size:20px;
+    color:white;
     position: absolute;
     right: 0;
     bottom: 0.5em;
+}
+
+.btn-acao-grafitti {
+    width:49%;
+    height:65px;
+    display: inline-block;
 }
