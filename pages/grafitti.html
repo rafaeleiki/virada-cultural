@@ -24,21 +24,42 @@
       <h1 class="title">Graffiti Digital</h1>
     </header>
     
-    <div class="content">
-        <a href="#myModalexample" class="btn btn-add" id="myBtn">Adicione um novo Graffiti Digital</a>
+    <div class="content" style="margin: 10px 10px 10px 10px; ">
+        <a href="#myModalexample" class="btn btn-add" id="myBtn"><b>Adicione um novo Graffiti Digital</b></a>
+        
         <!-- The Modal -->
-       
-        <div id="myModalexample" class="modal">
-            <header class="bar bar-nav">
-                <a class="icon icon-close pull-right" href="#myModalexample"></a>
-                <h1 class="title">Modal</h1>
-            </header>
+        <div id="myModalexample" class="modal modal-small">
 
-            <div class="content">
-                <p class="content-padded">The contents of my modal go here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
-            </div>
+            <p class="content-padded">
+             <h1 style="font-size:20px; color:white;">Adicione um texto ou imagem</h1>
+                    <br>
+            <form>
+                <button class="btn btn-block" style="width:49%; height:65px; display: inline-block;"> <img src="../images/pen.png" height=40px width=40px  opacity=0.5></button> <button class="btn btn-block" style="width:49%; height:65px; display: inline-block;"><img src="../images/camera-icon.png" height=40px width=40px></button>
+                  <textarea rows="10"></textarea>
+                  
+            </form> 
+            <button class="btn btn-link btn-nav pull-right" style="font-size:20px; color:white;">
+                <b>Próximo</b>
+                <span class="icon icon-right-nav"></span>
+            </button>
+        </div>
+        <br><br> 
+        
+         <h1 style="font-size:20px; color:#8c8c8c;"> Graffitis perto de você:</h1>
+        <div class="graffiti-box">
+            <img class="profile-pic" src="../images/laisp.jpg">
+            <ul class="profile-data">
+            <h1 style="font-size:25px;"> Laís P.:</h1>
+            <p style="font-size:14px;line-height: 0.8; color:white">Adicionado 24/06/2017, 10h45:</p>
+            
+            </ul>
+            <img src="../images/graffiti-ex.jpg" style="width:100%">
+            <p>  </p>
+            <button class="btn btn-map" style="position:inline;">Ver no mapa</button>
+            
         </div>
     </div>
+    
 </body>
 </html>
 <script src="../js/os.js"></script>

@@ -4,9 +4,56 @@
   background-color: #ac00e6;
   border: 1px solid #ac00e6;
   width: 80%;
-  margin: 10px 10px 10px 10px; 
   padding-top: 20px;
   padding-bottom: 20px;
-  width:95%;
+  width:100%;
   font-size:18px;
+}
+
+.btn-map {
+  border-radius: 5px;
+  background-color: white;
+  border: 1px solid white;
+  width: 80%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width:100%;
+  font-size:18px;
+}
+
+.modal-small {
+    background-color: #FF6663;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 60px 5% 100px 0%; 
+    width: 95%;
+    max-height: 60%;
+}
+
+.graffiti-box {
+    color: white;
+    font-size: 17px;
+    background-color: #2978A0;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.profile-pic {
+    margin-left: 10px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.profile-data {
+    padding-left: 20px;
+    display: inline-block;
+    list-style: none;
+    vertical-align:top;
+    text-align: left;
 }
