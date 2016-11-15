@@ -1,0 +1,112 @@
+<html>
+<head>
+     <title>Virada Cultural</title>
+  <!-- Sets initial viewport load and disables zooming  -->
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+  <!-- Evitar problemas com caracteres latinos -->
+  <meta charset="UTF-8">
+
+  <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <link type="text/css" rel="stylesheet" href="../ratchet-2.0.2/dist/css/ratchet.min.css"/>
+  <script src="../ratchet-2.0.2/dist/js/ratchet.min.js"></script>
+
+    <style>
+        
+            .popup {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    /* The actual popup */
+    .popup .popuptext {
+        visibility: hidden;
+        width: 160px;
+        background-color: white;
+        text-align: center;
+        border-radius: 6px;
+        padding: 8px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -80px;
+    }
+
+    /* Popup arrow */
+    .popup .popuptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: white transparent transparent transparent;
+    }
+
+    /* Toggle this class - hide and show the popup */
+    .popup .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s;
+    }
+
+    /* Add animation (fade in the popup) */
+    @-webkit-keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity:1 ;}
+    }
+            .content {
+            background: url("mapa.png") no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        } 
+</style> 
+    
+    
+</head>
+
+<body>
+<header class="bar bar-nav">
+  <a class="icon icon-left-nav pull-left" style="color:white" href="../index.html" data-transition="slide-out"></a>
+  <h1 class="title">Mapa</h1>
+</header>
+     <div class="content">
+          <br>
+          <input type="text" placeholder="Buscar local ou Ponto de Interesse" style="margin-left: 10%; width: 70% ">
+          <button class="btn" style="height: 35px; width: 35px; border-radius: 50%;">
+                <span class="icon icon-search"></span>
+          </button>
+    </div>
+    <br><br><br><br><br><br>
+    <div class="popup" onclick="myFunction()">Click me to toggle the popup!
+        <span class="popuptext" id="myPopup">A Simple Popup!</span>
+    </div>
+    
+    <script>
+// When the user clicks on div, open the popup
+function myFunction() {
+    var popup = document.getElementById('myPopup');
+    popup.classList.toggle('show');
+}
+</script>
+
+</body>
+</html>
+<script src="../js/os.js"></script>
