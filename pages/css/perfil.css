@@ -23,7 +23,17 @@
     vertical-align: bottom;
 }
 
+.profile-social-icon {
+    font-size: 20px;
+}
 
+.icon-bg {
+    color: #fff;
+}
+
+.logo {
+    color: #F7DC62;
+}
 
 .profile-username {
     font-weight: bold;
