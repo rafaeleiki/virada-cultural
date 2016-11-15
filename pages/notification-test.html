@@ -1,0 +1,36 @@
+<html>
+<head>
+
+    <title>Virada Cultural</title>
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <!-- Evitar problemas com caracteres latinos -->
+    <meta charset="UTF-8">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link type="text/css" rel="stylesheet" href="../ratchet-2.0.2/dist/css/ratchet.min.css"/>
+
+    <link rel="stylesheet" href="css/base.css" />
+
+    <script src="../ratchet-2.0.2/dist/js/ratchet.min.js"></script>
+</head>
+
+<body>
+    <header class="bar bar-nav">
+    </header>
+    <div class="content">
+
+    </div>
+</body>
+</html>
+<script src="../js/os.js"></script>
+<script src="../js/notification.js"></script>
+<script>
+    window.setTimeout(function () {
+        Notification.show('HI');
+    }, 2000);
+</script>
