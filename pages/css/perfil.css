@@ -44,3 +44,29 @@
      margin-right: 10px;
     border:none;
 }
+
+
+.graffiti-box {
+    color: #333;
+    font-size: 20px;
+    background-color: white;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #333;
+    border-width: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.btn-map {
+  border-radius: 5px;
+  background-color: #FF6663;
+  border: 1px solid white;
+  width: 80%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width:100%;
+  font-size:18px;
+}
