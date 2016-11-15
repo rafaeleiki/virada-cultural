@@ -28,7 +28,7 @@
     padding-right: 10px;
     margin: 60px 5% 100px 0%; 
     width: 95%;
-    max-height: 60%;
+    max-height: 75%;
 }
 
 .graffiti-box {
@@ -39,7 +39,7 @@
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 20px;
-  padding-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 .profile-pic {
@@ -56,4 +56,10 @@
     list-style: none;
     vertical-align:top;
     text-align: left;
+}
+
+.btn-proximo {
+    position: absolute;
+    right: 0;
+    bottom: 0.5em;
 }
