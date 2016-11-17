@@ -85,6 +85,20 @@
     transition: transform 0.3s ease-out, opacity 0.2s linear;
 }
 
+.menu-container:before {
+    content: 'Virada Cultural';
+    font-family: Harabara;
+    letter-spacing: 1px;
+    font-size: 27px;
+    font-weight: 500;
+    line-height: 44px;
+    color: white;
+    display: block;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
 .menu-container.menu-open {
     opacity: 1;
     transform: translateY(0%);
