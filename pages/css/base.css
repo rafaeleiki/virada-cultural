@@ -35,6 +35,26 @@
 }
 
 /* Menu principal */
+.menu-trigger {
+    border-radius: 50%;
+    background-color: #fff;
+    border: solid #666 1px;
+    width: 3em;
+    height: 3em;
+    position: fixed;
+    bottom: 0.5em;
+    left: calc(50% - 1.5em);
+    z-index: 100000;
+}
+
+.menu-trigger * {
+    transition: transform 0.2s linear;
+}
+
+.menu-trigger:active * {
+    transform: scale(2);
+}
+
 .main-menu {
     position: relative;
     z-index: 1000;
