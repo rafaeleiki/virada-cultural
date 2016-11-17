@@ -1,3 +1,8 @@
+/* Modificação no Ratchet */
+.segmented-control {
+    border-radius: 0;
+}
+
 /* Notificação */
 .notification {
     display: block;

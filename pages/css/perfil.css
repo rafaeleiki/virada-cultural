@@ -71,3 +71,25 @@
 .profile-tab {
     font-size: 1rem;
 }
+
+/* Pagamentos */
+
+.payment-history {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.payment-history > li {
+    border-bottom: solid rgba(51, 51, 51, 0.6) 2px;
+    padding: 0.25em;
+}
+
+.payment-details {
+    list-style: none;
+    padding: 0;
+}
+
+.payment-details li:not(.payment-item) {
+    color: #333;
+}
