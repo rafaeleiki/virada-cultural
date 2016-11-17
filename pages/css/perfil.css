@@ -47,13 +47,22 @@
     border:none;
 }
 
+.profile-tab {
+    font-size: 1rem;
+}
 
+/* Graffiti Digital */
 .graffiti-box {
     color: #333;
-    font-size: 20px;
+    font-size: 17px;
     background-color: white;
     padding: 20px 10px;
 }
+
+.graffiti-description{
+    padding: 10px 10px 10px 10px;
+}
+
 
 .btn-map {
   border-radius: 5px;
@@ -66,9 +75,6 @@
   font-size:18px;
 }
 
-.profile-tab {
-    font-size: 1rem;
-}
 
 /* Pagamentos */
 
