@@ -1,3 +1,8 @@
+.graffiti-content {
+    padding-bottom: calc(4em - 10px);
+    margin: 10px;
+}
+
 .graffiti-step {
     display: none;
 }
