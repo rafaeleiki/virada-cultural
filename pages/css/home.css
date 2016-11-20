@@ -13,3 +13,16 @@
 .login {
     margin-top: 10em;
 }
+
+.menu-indicator {
+    color: #AC00E6;
+    background-color: #fff;
+    font-weight: bold;
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: 3em;
+    text-align: center;
+    display: block;
+    line-height: 2rem;
+    width: 100%;
+}
