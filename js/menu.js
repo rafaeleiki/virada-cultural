@@ -68,7 +68,7 @@ var MenuController = (function() {
             if (this.open) {
                 this.menuContainer.classList.add('menu-open');
             } else {
-
+                this.menuContainer.classList.remove('menu-open');
             }
         },
 
