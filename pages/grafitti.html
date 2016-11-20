@@ -39,13 +39,13 @@
                     <h1 style="font-size:20px; color:white;">Adicione um texto ou imagem</h1>
                     <br>
                     <button class="btn btn-block btn-acao-graffiti">
-                        <img src="../images/pen.png" height=40px width=40px  opacity=0.5>
+                        <img src="/virada-cultural/images/pen.png" height=40px width=40px  opacity=0.5>
                     </button>
                     <button class="btn btn-block btn-acao-graffiti">
-                        <img src="../images/camera-icon.png" height=40px width=40px>
+                        <img src="/virada-cultural/images/camera-icon.png" height=40px width=40px>
                     </button>
                     <textarea rows="10"></textarea>
-                    <button class="btn btn-link btn-nav pull-right btn-proximo" onclick="goToStep(2, event)">
+                    <button class="btn btn-link btn-nav pull-right btn-proximo" id="go-to-2">
                         <b>Próximo</b>
                         <span class="icon icon-right-nav"></span>
                     </button>
@@ -61,31 +61,35 @@
         
          <h1 style="font-size:20px; color:#8c8c8c;"> Graffitis perto de você:</h1>
         <div class="graffiti-box">
-            <img class="profile-pic" src="../images/laisp.jpg">
+            <img class="profile-pic" src="/virada-cultural/images/laisp.jpg">
             <ul class="profile-data">
             <h1 style="font-size:25px;"> Laís P.:</h1>
             <p style="font-size:14px;line-height: 0.8; color:white">Adicionado 24/06/2017, 10h45:</p>
             
             </ul>
-            <img src="../images/graffiti-ex.jpg" style="width:100%">
+            <img src="/virada-cultural/images/graffiti-ex.jpg" style="width:100%">
             <p>  </p>
             <button class="btn btn-map" style="position:inline;">Ver no mapa</button>
             
         </div>
+        <script class="js-custom">
+            document.getElementById('go-to-2').addEventListener('click', function (event) {
+                goToStep(2, event);
+            });
+
+            function goToStep(step, event) {
+                event.preventDefault();
+                document.querySelectorAll('.graffiti-step').forEach(function(element) {
+                    if (element.id.indexOf(step) >= 0) {
+                        element.style.display = 'block';
+                    } else {
+                        element.style.display = 'none';
+                    }
+                });
+            }
+        </script>
     </div>
     
 </body>
 </html>
 <script src="../js/os.js"></script>
-<script>
-    function goToStep(step, event) {
-        event.preventDefault();
-        document.querySelectorAll('.graffiti-step').forEach(function(element) {
-            if (element.id.indexOf(step) >= 0) {
-                element.style.display = 'block';
-            } else {
-                element.style.display = 'none';
-            }
-        });
-    }
-</script>

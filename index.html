@@ -20,6 +20,7 @@
 
     <link type="text/css" rel="stylesheet" href="pages/css/perfil.css" />
     <link rel="stylesheet" href="pages/css/mapa.css" />
+    <link rel="stylesheet" href="pages/css/grafitti.css" />
 </head>
 
 <body>
@@ -39,5 +40,13 @@
 
 <script src="js/os.js"></script>
 <script src="js/menu.js"></script>
+<script>
+    window.addEventListener('push', function(){
+        var scriptsList = document.querySelectorAll('script.js-custom');
+        for(var i = 0; i < scriptsList.length; ++i) {
+            eval(scriptsList[i].innerHTML);
+        }
+    });
+</script>
 
 </html>
