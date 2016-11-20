@@ -18,6 +18,7 @@
 
     <link rel="stylesheet" href="pages/css/base.css" />
 
+    <link rel="stylesheet" href="pages/css/home.css" />
     <link type="text/css" rel="stylesheet" href="pages/css/perfil.css" />
     <link rel="stylesheet" href="pages/css/mapa.css" />
     <link rel="stylesheet" href="pages/css/grafitti.css" />
@@ -27,14 +28,18 @@
 <header class="bar bar-nav">
   <h1 class="title">Virada Cultural</h1>
 </header>
-<div class="content">
-    <br><br><br>
+<div class="content home-content">
+    <div class="home-overlay"></div>
     <button id="menu-trigger" class="menu-trigger"><span class="fa fa-circle"></span></button>
-    <a href="pages/mapa.html" style="background-color:#ac00e6" data-transition="slide-in">Mapa</a>
-    <br>
-    <a href="pages/perfil.html" style="background-color:#E84855" data-transition="slide-in">Perfil</a>
-    <p style="background-color:#3185FC">exemplos de cor </p>
-    <p style="background-color:#F7DC62">exemplos cor</p>
+
+    <form class="login input-group">
+        <input type="text" placeholder="Nome de usuário ou email">
+        <input type="password" placeholder="Senha">
+        <button class="btn btn-positive btn-block">Entrar</button>
+    </form>
+
+    <button class="btn btn-block">Problemas para entrar?</button>
+
 </div>
 </body>
 
