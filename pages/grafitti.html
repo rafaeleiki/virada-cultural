@@ -35,13 +35,13 @@
             <p class="content-padded">
 
             <form>
-                <div id="grafitti1" name="grafitti-step">
+                <div id="grafitti1" class="graffiti-step graffiti-starter-step">
                     <h1 style="font-size:20px; color:white;">Adicione um texto ou imagem</h1>
                     <br>
-                    <button class="btn btn-block btn-acao-grafitti">
+                    <button class="btn btn-block btn-acao-graffiti">
                         <img src="../images/pen.png" height=40px width=40px  opacity=0.5>
                     </button>
-                    <button class="btn btn-block btn-acao-grafitti">
+                    <button class="btn btn-block btn-acao-graffiti">
                         <img src="../images/camera-icon.png" height=40px width=40px>
                     </button>
                     <textarea rows="10"></textarea>
@@ -50,7 +50,7 @@
                         <span class="icon icon-right-nav"></span>
                     </button>
                 </div>
-                <div id="grafitti2" name="grafitti-step">
+                <div id="grafitti2" class="graffiti-step">
                     <h1 style="font-size:20px; color:white;">Posicione seu Graffiti Digital</h1>
                     <br>
                     Aponte seu celular para um poste ou prédio para posicionar seu Graffiti Digital
@@ -80,7 +80,7 @@
 <script>
     function goToStep(step, event) {
         event.preventDefault();
-        document.getElementsByName('grafitti-step').forEach(function(element) {
+        document.querySelectorAll('.graffiti-step').forEach(function(element) {
             if (element.id.indexOf(step) >= 0) {
                 element.style.display = 'block';
             } else {

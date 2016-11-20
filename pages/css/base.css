@@ -22,21 +22,10 @@
 }
 
 @-webkit-keyframes notificationAnimation {
-    0% {
-        top: -10em;
-    }
-
-    8% {
-        top: 1em;
-    }
-
-    92% {
-        top: 1em;
-    }
-
-    100% {
-        top: -10em;
-    }
+    0%   {  top: -10em;  }
+    8%   {  top: 1em;  }
+    92%  {  top: 1em;  }
+    100% {  top: -10em;  }
 }
 
 /* Menu principal */

@@ -1,3 +1,11 @@
+.graffiti-step {
+    display: none;
+}
+
+.graffiti-starter-step {
+    display: block;
+}
+
 .btn-add {
   color: white;
   border-radius: 5px;
@@ -67,7 +75,7 @@
     bottom: 0.5em;
 }
 
-.btn-acao-grafitti {
+.btn-acao-graffiti {
     width:49%;
     height:65px;
     display: inline-block;
