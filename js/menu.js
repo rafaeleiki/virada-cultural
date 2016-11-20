@@ -46,30 +46,41 @@ var MenuController = (function() {
             itemsList.className = 'menu-items-list';
             this.menuContainer.appendChild(itemsList);
 
-            itemsList.appendChild(this.createItem('menu-i-map'));
-            itemsList.appendChild(this.createItem('menu-i-profile'));
-            itemsList.appendChild(this.createItem('menu-i-graffiti'));
-            itemsList.appendChild(this.createItem('menu-i-planning'));
+            itemsList.appendChild(this.createItem('menu-i-map', 'mapa'));
+            itemsList.appendChild(this.createItem('menu-i-profile', 'perfil'));
+            itemsList.appendChild(this.createItem('menu-i-graffiti', 'grafitti'));
+            itemsList.appendChild(this.createItem('menu-i-planning', 'planejador'));
         },
 
-        createItem: function (className) {
+        createItem: function (className, pageName) {
             var item = document.createElement('li');
             item.className = 'menu-item ' + className;
+
+            var link = '<a href="/virada-cultural/pages/#name#.html" class="menu-link" data-transition="slide-in">#name#</a>';
+            link = link.replace(/#name#/g, pageName);
+            item.innerHTML = link;
+
             return item;
         },
 
-        toggleMenu: function toggleMenu() {
+        toggleMenu: function () {
             this.open = !this.open;
             if (this.open) {
                 this.menuContainer.classList.add('menu-open');
             } else {
-                this.menuContainer.classList.remove('menu-open');
+
             }
+        },
+
+        closeMenu: function () {
+            this.open = false;
+            this.menuContainer.classList.remove('menu-open');
         }
     };
 
     menuController.init();
     window.addEventListener('push', function () {
+        menuController.closeMenu();
         menuController.init();
     });
 
