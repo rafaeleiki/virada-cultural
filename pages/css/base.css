@@ -145,28 +145,28 @@
 }
 
 .menu-i-map {
-    background-color: red;
+    background-color: #ac00e6;
     margin: -128px auto auto;
 }
 
 .menu-i-profile {
-    background-color: blue;
+    background-color: #E84855;
     margin: 108px -64px auto;
 }
 
 .menu-i-graffiti {
-    background-color: yellow;
+    background-color: #1aa3ff;
     left: calc(50% - 1.25em + 120px);
     margin-top: -36px;
 }
 
 .menu-i-friends {
-    background-color: #ff5f87;
+    background-color: #F7DC62;
     margin: 108px 64px auto;
 }
 
 .menu-i-planning {
-    background-color: green;
+    background-color: #7AC74F;
     left: calc(50% - 1.25em - 120px);
     margin-top: -36px;
 }
