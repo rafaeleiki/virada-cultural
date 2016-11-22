@@ -19,6 +19,8 @@
 
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/mapa.css" />
+    <link rel="stylesheet" href="css/pagamento.css" />
+    <link type="text/css" rel="stylesheet" href="css/componentes.css" />
     
 </head>
 
@@ -31,28 +33,70 @@
 <div class="content map-content">
 
     <button id="menu-trigger" class="menu-trigger"><span class="fa fa-circle"></span></button>
-          <br>
-         <div class="dropdown"> 
-             <input class="dropbtn" type="text" placeholder="Buscar local ou Ponto de Interesse" style=" width: 70% ">
-             <div class="dropdown-content">
-                <a href="#"> <span class="fa fa-male"><span class="fa fa-female" style="margin-right: 5px;"></span>Banheiro</a>
-                <a href="#"> <span class="fa fa-medkit" style="margin-right: 5px;"></span> Ambulatório</a>
-                <a href="#"> <span class="fa fa-shield" style="margin-right: 5px;"></span>Segurança</a>
-                <a href="#"> <span class="fa fa-trash" style="margin-right: 5px;"></span>Lixeira</a>
-                <a href="#"> <span class="fa fa-subway" style="margin-right: 5px;"></span>Metrô</a>
-                <a href="#"> <span class="fa fa-bus" style="margin-right: 5px;"></span> Ponto de ônibus</a>
-                 <a href="#"> <span class="fa fa-bicycle" style="margin-right: 5px;"></span> Aluguel de Bicicleta</a>
-                 <a href="#">  <span class="fa fa-cutlery" style="margin-right: 5px;"></span>  Praça de Alimentação</a>
-                <a href="#"> <span class="fa fa-money" style="margin-right: 5px;"></span> Vendedor ambulante</a>
-                <a href="#"> <span class="fa fa-wheelchair" style="margin-right: 5px;"></span> PNE</a>
-              <a href="#"> <span class="fa fa-newspaper-o" style="margin-right: 5px;"></span>Imprensa (Acesso Restrito)</a>
-              </div>
+    <br>
+    <div class="dropdown">
+        <input class="dropbtn" type="text" placeholder="Buscar local ou Ponto de Interesse" style=" width: 70% ">
+        <div class="dropdown-content">
+            <a href="#"> <span class="fa fa-male"><span class="fa fa-female" style="margin-right: 5px;"></span>Banheiro</a>
+            <a href="#"> <span class="fa fa-medkit" style="margin-right: 5px;"></span> Ambulatório</a>
+            <a href="#"> <span class="fa fa-shield" style="margin-right: 5px;"></span>Segurança</a>
+            <a href="#"> <span class="fa fa-trash" style="margin-right: 5px;"></span>Lixeira</a>
+            <a href="#"> <span class="fa fa-subway" style="margin-right: 5px;"></span>Metrô</a>
+            <a href="#"> <span class="fa fa-bus" style="margin-right: 5px;"></span> Ponto de ônibus</a>
+            <a href="#"> <span class="fa fa-bicycle" style="margin-right: 5px;"></span> Aluguel de Bicicleta</a>
+            <a href="#">  <span class="fa fa-cutlery" style="margin-right: 5px;"></span>  Praça de Alimentação</a>
+            <a href="#"> <span class="fa fa-money" style="margin-right: 5px;"></span> Vendedor ambulante</a>
+            <a href="#"> <span class="fa fa-wheelchair" style="margin-right: 5px;"></span> PNE</a>
+            <a href="#"> <span class="fa fa-newspaper-o" style="margin-right: 5px;"></span>Imprensa (Acesso Restrito)</a>
+        </div>
         
-           <a href="../pages/mapa2.html"><button class="btn" style="display: inline-block; height: 35px; width: 35px; border-radius: 50%;">
+        <a href="../pages/mapa2.html">
+            <button class="btn" style="display: inline-block; height: 35px; width: 35px; border-radius: 50%;">
                 <span class="icon icon-search"></span>
-          </button></a>
- </div>
+            </button>
+        </a>
     </div>
+
+    <!-- Pagamento -->
+    <a href="#paymentModal" id="payment" class="btn" style="display: none"></a>
+    <div id="paymentModal" class="modal">
+        <header class="bar bar-nav payment-nav">
+            <a class="icon icon-close pull-right" href="#paymentModal"></a>
+            <h1 class="title">Pagamento</h1>
+        </header>
+
+        <div class="content">
+            <div class="payment-content">
+                <label class="purchase-name">Lanche X-Virado</label>
+                <label class="purchase-name">R$8,00</label>
+                <img class="purchase-pic" src="/virada-cultural/images/lanche.jpg" />
+
+                <p class="content-padded purchase-description">
+                    Lanche com alface crespa, tomate seco, mussarela e um delicioso
+                    hambúrguer de picanha com molho invertido.
+                </p>
+
+                <a class="btn btn-yes" href="#paymentModal">
+                    <span class="icon icon-check"></span>
+                </a>
+                <a class="btn btn-no" href="#paymentModal">
+                    <span class="icon icon-close"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script class="js-custom">
+        function openPaymentModal() {
+            var event = document.createEvent("HTMLEvents");
+            event.initEvent("touchend", true, true);
+            document.getElementById('payment').dispatchEvent(event);
+        }
+
+        setTimeout(openPaymentModal, 5000);
+    </script>
+    <!-- Fim do modal de pagamento -->
+</div>
 </body>
 </html>
 <script src="../js/os.js"></script>

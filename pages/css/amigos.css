@@ -17,31 +17,6 @@
 width: 100%;
 }
 
-.btn-yes {
-  color: white;
-  border-radius: 5px;
-  background-color: #5cb85c;
-  border: 1px solid #5cb85c;
-  width: 49%;
-  height: 50px;
-  vertical-align: middle;
-  padding-bottom: 20px;
-  margin-right: 2%;
-  font-size:30px;
-}
-
-.btn-no {
-  color: white;
-  border-radius: 5px;
-  background-color: #E84855;
-  border: 1px solid #E84855;
-  width: 49%;
-  height: 50px;
-  vertical-align: middle;
-  padding-bottom: 20px;
-  font-size:30px;
-}
-
 .pic-header {
     padding: 0.5em;
     background-color: #F7DC62;
@@ -50,7 +25,7 @@ width: 100%;
 .event{
     padding: 0.5em;
     background-color: #2978A0;
-margin-bottom: 4px;
+    margin-bottom: 4px;
 }
 
 .event-name{
