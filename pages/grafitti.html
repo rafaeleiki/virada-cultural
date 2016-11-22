@@ -1,109 +1,113 @@
 <html>
 <head>
+    <title>Virada Cultural</title>
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 
-  <title>Virada Cultural</title>
-  <!-- Sets initial viewport load and disables zooming  -->
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- Evitar problemas com caracteres latinos -->
+    <meta charset="UTF-8">
 
-  <!-- Evitar problemas com caracteres latinos -->
-  <meta charset="UTF-8">
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-  <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
-  <link type="text/css" rel="stylesheet" href="../ratchet-2.0.2/dist/css/ratchet.min.css"/>
-  <script src="../ratchet-2.0.2/dist/js/ratchet.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="../ratchet-2.0.2/dist/css/ratchet.min.css"/>
+    <script src="../ratchet-2.0.2/dist/js/ratchet.min.js"></script>
     <link type="text/css" rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css" />
 
-  <link rel="stylesheet" href="css/base.css" />
-  <link rel="stylesheet" href="css/grafitti.css" />
+    <script src="../js/notification.js"></script>
+
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/graffiti.css" />
 </head>
 
 <body>
-    
-    <header class="bar bar-nav" style="background-color:#1aa3ff">
-      <a class="icon icon-left-nav pull-left" style="color:white" href="../index.html" data-transition="slide-out"></a>
-      <a class="icon pull-right"><span class="fa fa-question" style="color: white;"></span></a>
-      <h1 class="title">Graffiti Digital</h1>
-    </header>
-    
-    <div class="content graffiti-content">
-        <button id="menu-trigger" class="menu-trigger"><span class="fa fa-circle"></span></button>
-        <a href="#myModalexample" class="btn btn-add" id="myBtn"><b>Adicione um novo Graffiti Digital</b></a>
-        
-        <!-- The Modal -->
-        <div id="myModalexample" class="modal modal-small">
 
-            <p class="content-padded">
+<header class="bar bar-nav" style="background-color:#1aa3ff">
+    <a class="icon icon-left-nav pull-left" style="color:white" href="../index.html" data-transition="slide-out"></a>
+    <a class="icon pull-right"><span class="fa fa-question" style="color: white;"></span></a>
+    <h1 class="title">Graffiti Digital</h1>
+</header>
 
-            <form>
-                <div id="grafitti1" class="graffiti-step graffiti-starter-step">
-                    <h1 style="font-size:20px; color:white;">Adicione um texto ou imagem</h1>
-                    <br>
-                    <button class="btn btn-block btn-acao-graffiti">
-                        <img src="/virada-cultural/images/pen.png" height=40px width=40px  opacity=0.5>
-                    </button>
-                    <button class="btn btn-block btn-acao-graffiti">
-                        <img src="/virada-cultural/images/camera-icon.png" height=40px width=40px>
-                    </button>
-                    <textarea rows="10"></textarea>
-                    <button class="btn btn-link btn-nav pull-right btn-proximo" id="go-to-2">
-                        <b>Próximo</b>
-                        <span class="icon icon-right-nav"></span>
-                    </button>
-                </div>
-                <div id="grafitti2" class="graffiti-step">
-                    <h1 style="font-size:20px; color:white; text-align:left;">Posicione seu Graffiti Digital</h1>
-                    <br>
-                    Aponte seu celular para um poste ou prédio para posicionar seu Graffiti Digital
-                    <br><br>
-                    <img src="/virada-cultural/images/poste.png" margin-top=20px; width=150px height=150px>
-                    <br><br>
-                    Quando estiver satisfeita com a projeção, finalize para fixar seu Graffiti
-                    
-                    <button class="btn btn-link btn-nav pull-right btn-proximo" id="go-to-2">
-                        <b>Finalizar</b>
-                          <span class="icon icon-check"></span>
-                    </button>
-                </div>
-            </form>
-        </div>
-        <br><br> 
-        
-         <h1 style="font-size:20px; color:#8c8c8c;"> Graffitis perto de você:</h1>
-        <div class="graffiti-box">
-            <img class="profile-pic" src="/virada-cultural/images/laisp.jpg">
-            <ul class="profile-data">
+<div class="content graffiti-content">
+    <button id="menu-trigger" class="menu-trigger"><span class="fa fa-circle"></span></button>
+    <a href="#myModalexample" class="btn btn-add" id="myBtn"><b>Adicione um novo Graffiti Digital</b></a>
+
+    <!-- The Modal -->
+    <div id="myModalexample" class="modal modal-small">
+
+        <p class="content-padded">
+
+        <form>
+            <div id="grafitti1" class="graffiti-step graffiti-starter-step">
+                <h1 style="font-size:20px; color:white;">Adicione um texto ou imagem</h1>
+                <br>
+                <button class="btn btn-block btn-acao-graffiti">
+                    <img src="/virada-cultural/images/pen.png" height=40px width=40px  opacity=0.5>
+                </button>
+                <button class="btn btn-block btn-acao-graffiti">
+                    <img src="/virada-cultural/images/camera-icon.png" height=40px width=40px>
+                </button>
+                <textarea rows="10"></textarea>
+                <button class="btn btn-link btn-nav pull-right btn-proximo" id="go-to-2">
+                    <b>Próximo</b>
+                    <span class="icon icon-right-nav"></span>
+                </button>
+            </div>
+            <div id="grafitti2" class="graffiti-step">
+                <h1 style="font-size:20px; color:white; text-align:left;">Posicione seu Graffiti Digital</h1>
+                <br>
+                Aponte seu celular para um poste ou prédio para posicionar seu Graffiti Digital
+                <br><br>
+                <img src="/virada-cultural/images/poste.png" margin-top=20px; width=150px height=150px>
+                <br><br>
+                Quando estiver satisfeita com a projeção, finalize para fixar seu Graffiti
+
+                <button class="btn btn-link btn-nav pull-right btn-proximo" id="go-to-2">
+                    <b>Finalizar</b>
+                    <span class="icon icon-check"></span>
+                </button>
+            </div>
+        </form>
+    </div>
+    <br><br>
+
+    <h1 style="font-size:20px; color:#8c8c8c;"> Graffitis perto de você:</h1>
+    <div class="graffiti-box">
+        <img class="profile-pic" src="/virada-cultural/images/laisp.jpg">
+        <ul class="profile-data">
             <h1 style="font-size:25px;"> Laís P.:</h1>
             <p style="font-size:14px;line-height: 0.8; color:white">Adicionado 24/06/2017, 10h45:</p>
-            
-            </ul>
-            <img src="/virada-cultural/images/graffiti-ex.jpg" style="width:100%">
-            <p>  </p>
-            <button class="btn btn-map" style="position:inline;">Ver no mapa</button>
-            
-        </div>
-        <script class="js-custom">
-            document.getElementById('go-to-2').addEventListener('click', function (event) {
-                goToStep(2, event);
-            });
 
-            function goToStep(step, event) {
-                event.preventDefault();
-                document.querySelectorAll('.graffiti-step').forEach(function(element) {
-                    if (element.id.indexOf(step) >= 0) {
-                        element.style.display = 'block';
-                    } else {
-                        element.style.display = 'none';
-                    }
-                });
-            }
-        </script>
+        </ul>
+        <img src="/virada-cultural/images/graffiti-ex.jpg" style="width:100%">
+        <p>  </p>
+        <button class="btn btn-map" style="position:inline;">Ver no mapa</button>
+
     </div>
-    
+    <script class="js-custom">
+        document.getElementById('go-to-2').addEventListener('click', function (event) {
+            goToStep(2, event);
+        });
+
+        function goToStep(step, event) {
+            event.preventDefault();
+            document.querySelectorAll('.graffiti-step').forEach(function(element) {
+                if (element.id.indexOf(step) >= 0) {
+                    element.style.display = 'block';
+                } else {
+                    element.style.display = 'none';
+                }
+            });
+        }
+
+        setTimeout(function () {
+            Notification.show('Tem um novo graffiti digital perto de você!');
+        }, 3000);
+    </script>
+</div>
+
 </body>
 </html>
 <script src="../js/os.js"></script>
 <script src="../js/menu.js"></script>
-<script src="../js/notification.js"></script>
