@@ -50,6 +50,7 @@ var MenuController = (function() {
             itemsList.appendChild(this.createItem('menu-i-profile', 'perfil'));
             itemsList.appendChild(this.createItem('menu-i-graffiti', 'grafitti'));
             itemsList.appendChild(this.createItem('menu-i-planning', 'planejador'));
+            itemsList.appendChild(this.createItem('menu-i-friends', 'amigos'));
         },
 
         createItem: function (className, pageName) {

@@ -151,17 +151,24 @@
 
 .menu-i-profile {
     background-color: blue;
-    margin: 128px auto auto;
+    margin: 108px -64px auto;
 }
 
 .menu-i-graffiti {
     background-color: yellow;
-    left: calc(50% - 1.25em + 128px);
+    left: calc(50% - 1.25em + 120px);
+    margin-top: -36px;
+}
+
+.menu-i-friends {
+    background-color: #ff5f87;
+    margin: 108px 64px auto;
 }
 
 .menu-i-planning {
     background-color: green;
-    left: calc(50% - 1.25em - 128px);
+    left: calc(50% - 1.25em - 120px);
+    margin-top: -36px;
 }
 
 .menu-i-planning .menu-link {
