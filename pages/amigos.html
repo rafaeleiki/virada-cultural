@@ -16,6 +16,8 @@
     <link type="text/css" rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css" />
     <script src="../ratchet-2.0.2/dist/js/ratchet.min.js"></script>
 
+    <script src="../js/notification.js"></script>
+
     <link rel="stylesheet" href="css/base.css" />
     <link type="text/css" rel="stylesheet" href="css/amigos.css" />
     <link type="text/css" rel="stylesheet" href="css/componentes.css" />
@@ -28,67 +30,69 @@
     <a class="icon pull-right"><span class="fa fa-question" style="color: white;"></span></a>
     <h1 class="title">Amigos</h1>
 </header>
-    
-        <button id="menu-trigger" class="menu-trigger"><span class="fa fa-circle"></span></button>
-        
-    
-        <div class="content" style="margin: 10px 10px 10px 10px; ">
-                
-        <a href="#myModalexample" class="btn btn-find" id="myBtn" style="position:inline;">Buscar novos amigos</a>
-        
-        <div id="myModalexample" class="modal modal-small">
-            <div class="padded">
-                <h1 style="font-size:22px; font-weight:bold; color:white;">Nova Sugestão de amizade</h1>
-                <img class="profile-pic" src="../images/mariot.jpg">
+<div class="content" style="margin: 10px 10px 10px 10px; ">
+    <button id="menu-trigger" class="menu-trigger"><span class="fa fa-circle"></span></button>
+    <a href="#myModalexample" class="btn btn-find" id="myBtn" style="position:inline;">Buscar novos amigos</a>
+
+    <div id="myModalexample" class="modal modal-small">
+        <div class="padded">
+            <h1 style="font-size:22px; font-weight:bold; color:white;">Nova Sugestão de amizade</h1>
+            <img class="profile-pic" src="../images/mariot.jpg">
             <ul class="profile-data">
                 <li class="profile-username">Mário T.</li>
                 <li>"To aqui pra causar "</li>
                 <button class="btn btn-profile">Ver Pefil Completo</button>
             </ul>
-            </div>
-            <div class="padded">
-                <h1 style="font-size:18px; color:white;">Cronograma em comum:</h1>
-                <div class="event">
-                    <div class="event-name">Criolo</div>
-                    Palco Júlio Prestes - 15h
-                </div>
-                <div class="event">
-                    <div class="event-name">Concurso Rainha da Virada</div>
-                    Palco Arrouche - 17h
-                </div>
-                <div class="event">
-                    <div class="event-name">Anitta</div>
-                    Palco Arrouche - 19h
-                </div>
-                <div class="event">
-                    <div class="event-name">Valesca Popozuda</div>
-                    Palco São João - 22h
-                </div>
-                
-            </div>
-            <h1 style="font-size:20px; padding-top:10px; color:white; text-align:center;">Deseja enviar solicitação de amizade?</h1>
-            <button class="btn btn-yes">
-                <span class="icon icon-check"></span>
-            </button>
-            <button class="btn btn-no">
-                <span class="icon icon-close"></span>
-            </button>
-            
         </div>
+        <div class="padded">
+            <h1 style="font-size:18px; color:white;">Cronograma em comum:</h1>
+            <div class="event">
+                <div class="event-name">Criolo</div>
+                Palco Júlio Prestes - 15h
+            </div>
+            <div class="event">
+                <div class="event-name">Concurso Rainha da Virada</div>
+                Palco Arrouche - 17h
+            </div>
+            <div class="event">
+                <div class="event-name">Anitta</div>
+                Palco Arrouche - 19h
+            </div>
+            <div class="event">
+                <div class="event-name">Valesca Popozuda</div>
+                Palco São João - 22h
+            </div>
 
-            <h1 style="font-size:20px; color:#8c8c8c;"> Seus amigos:</h1>
-        
-         <div class="pic-header">
-            <img class="profile-pic" src="../images/fabios.jpg">
-            <ul class="profile-data">
-                <li class="profile-username">Fábio S.</li>
-
-                <li>Agora: Palco São João</li>
-                <button class="btn btn-profile">Ver Pefil Completo</button>
-            </ul>
-            <br>
         </div>
+        <h1 style="font-size:20px; padding-top:10px; color:white; text-align:center;">Deseja enviar solicitação de amizade?</h1>
+        <button class="btn btn-yes">
+            <span class="icon icon-check"></span>
+        </button>
+        <button class="btn btn-no">
+            <span class="icon icon-close"></span>
+        </button>
+
     </div>
+
+    <h1 style="font-size:20px; color:#8c8c8c;"> Seus amigos:</h1>
+
+    <div class="pic-header">
+        <img class="profile-pic" src="../images/fabios.jpg">
+        <ul class="profile-data">
+            <li class="profile-username">Fábio S.</li>
+
+            <li>Agora: Palco São João</li>
+            <button class="btn btn-profile">Ver Pefil Completo</button>
+        </ul>
+        <br>
+    </div>
+
+    <script class="js-custom">
+        setTimeout(function () {
+            Notification.show('Você recebeu 5 pontos por jogar a lata de alumínio no lugar certo!');
+        }, 2000);
+    </script>
+</div>
     
 </body>
 </html>
