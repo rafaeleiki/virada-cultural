@@ -97,3 +97,8 @@
 .payment-details li:not(.payment-item) {
     color: #333;
 }
+
+/*Cronograma*/
+.time-table-body{
+    padding:10px;
+}
