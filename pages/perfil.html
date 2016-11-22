@@ -16,6 +16,8 @@
     <link type="text/css" rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css" />
     <script src="../ratchet-2.0.2/dist/js/ratchet.min.js"></script>
 
+    <script src="../js/notification.js"></script>
+
     <link rel="stylesheet" href="css/base.css" />
     <link type="text/css" rel="stylesheet" href="css/perfil.css" />
 
@@ -113,10 +115,15 @@
         </span>
     </div>
 
+    <script class="js-custom">
+        (function () {
+            setTimeout(function () {
+                Notification.show('Você recebeu 10 pontos!');
+            }, 5000);
+        })();
+    </script>
 </div>
 </body>
 </html>
 <script src="../js/os.js"></script>
 <script src="../js/menu.js"></script>
-<script src="../js/notification.js"></script>
-<script src="../js/pages/perfil.js"></script>
