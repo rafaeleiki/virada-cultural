@@ -16,6 +16,8 @@
     <script src="ratchet-2.0.2/dist/js/ratchet.min.js"></script>
     <link type="text/css" rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" />
 
+    <script src="js/virada.js"></script>
+
     <link rel="stylesheet" href="pages/css/base.css" />
 
     <link rel="stylesheet" href="pages/css/home.css" />
@@ -32,17 +34,59 @@
   <h1 class="title">Virada Cultural</h1>
 </header>
 <div class="content home-content">
-    <div class="home-overlay"></div>
     <button id="menu-trigger" class="menu-trigger"><span class="fa fa-circle"></span></button>
-
-    <form class="login input-group">
-        <input type="text" placeholder="Nome de usuário ou email">
-        <input type="password" placeholder="Senha">
-        <button class="btn btn-positive btn-block">Entrar</button>
-    </form>
-
-    <button class="btn btn-block">Problemas para entrar?</button>
-    <label class="menu-indicator">Use o menu abaixo para navegar</label>
+    <div class="slider" id="tutorialSlider">
+        <div id="slider" class="slide-group">
+            <div class="slide tutorial-slide">
+                <h2 class="tutorial-title">Bem vindo</h2>
+                <h2 class="tutorial-title">à Virada Cultural!</h2>
+                <img class="tutorial-decoration-image" src="/virada-cultural/images/tutorial-virada.png" />
+                <p class="tutorial-text">
+                    Integre-se com o evento e interaja com tudo e todos ao seu redor!
+                </p>
+                <span class="tutorial-drag">
+                    <button onclick="slide(1)" class="btn btn-primary">
+                        <span class="icon icon-left-nav"></span>
+                        Arraste para a esquerda
+                    </button>
+                </span>
+            </div>
+            <div class="slide tutorial-slide">
+                <h2 class="tutorial-title">Notificações</h2>
+                <img class="tutorial-notification-image" src="/virada-cultural/images/perfil.png" />
+                <p class="tutorial-text">
+                    Durante o evento, você receberá notificações com o que interage
+                </p>
+                <p class="tutorial-text">
+                    Receba pontos, descubra graffitis e confirme pagamentos com facilidade
+                </p>
+                <span class="tutorial-drag">
+                    <button onclick="slide(2)" class="btn btn-primary">
+                        Próximo
+                    </button>
+                </span>
+            </div>
+            <div class="slide tutorial-slide">
+                <h2 class="tutorial-title">Ajuda</h2>
+                <p class="tutorial-text">
+                    Em caso de dúvida, você pode pedir ajuda
+                </p>
+                <img class="tutorial-notification-image" src="/virada-cultural/images/ajuda.png" />
+                <p class="tutorial-text">
+                    Sempre que precisar de algo e não souber o que fazer, use o <span class="fa fa-question"></span>
+                </p>
+                <label class="menu-indicator">Use o menu abaixo para navegar</label>
+                <a class="btn btn-end-tutorial" href="pages/login.html" data-transition="slide-in">Entendi! Ir para o app</a>
+            </div>
+        </div>
+    </div>
+    <script class="js-custom">
+        function slide(page) {
+            var width = window.innerWidth;
+            var translate = 'translate3d(#w#px, 0, 0)'.replace(/#w#/, -width * page);
+            document.getElementById('slider').style.transform = translate;
+        }
+    </script>
 </div>
 </body>
 
