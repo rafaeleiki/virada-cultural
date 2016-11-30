@@ -3,6 +3,10 @@
     border-radius: 0;
 }
 
+.bar .icon {
+    color: #fff;
+}
+
 /* Notificação */
 .notification {
     display: block;
