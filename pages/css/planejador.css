@@ -74,4 +74,18 @@
     border-radius: 0.25em;
     text-align: center;
     font-weight: bold;
+    display: block;
+}
+
+.show-name {
+    display: block;
+    font-weight: bold;
+}
+
+.show-place {
+    display: block;
+}
+
+.activity-text {
+    text-align: justify;
 }

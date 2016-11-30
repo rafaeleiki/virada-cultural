@@ -39,14 +39,108 @@
             </div>
         </li>
         <li id="add-event" class="add-event-item">
-            <div class="show-pic">
-                <span class="add-event-btn fa fa-plus-circle"></span>
-            </div>
-            <div class="show-desc add-event-text">
-                <label class="add-event-desc">Adicionar um evento</label>
-            </div>
+            <a href="#modalAtracao">
+                <div class="show-pic">
+                    <span class="add-event-btn fa fa-plus-circle"></span>
+                </div>
+                <div class="show-desc add-event-text">
+                    <label class="add-event-desc">Adicionar uma atividade</label>
+                </div>
+            </a>
         </li>
     </ul>
+    <div id="modalAtracao" class="modal">
+        <header class="bar bar-nav">
+            <a class="icon icon-close pull-right" href="#modalAtracao"></a>
+            <h1 class="title">Nova atividade</h1>
+        </header>
+
+        <div class="content">
+            <ul class="table-view">
+                <li class="table-view-cell media" id="evento-1">
+                    <a class="navigate-right" onclick="addEvent('evento-1')">
+                        <img class="media-object pull-left" src="http://placehold.it/42x42">
+                        <div class="media-body" data-img="/virada-cultural/images/anitta.jpg">
+                            <label class="show-hour">15:00-15:45</label>
+                            <label class="show-name">Show da Carreta Furacão</label>
+                            <label class="show-place">Local: Morumbi</label>
+                            <p class="activity-text">
+                                Sucesso no Brasil todo, o grupo vai realizar um
+                                show de dança moderno, cheio de acrobacia e gingado.
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li class="table-view-cell media" id="evento-2">
+                    <a class="navigate-right" onclick="addEvent('evento-2')">
+                        <img class="media-object pull-left" src="http://placehold.it/42x42">
+                        <div class="media-body" data-img="/virada-cultural/images/anitta.jpg">
+                            <label class="show-hour">15:00-15:45</label>
+                            <label class="show-name">Show da Carreta Furacão</label>
+                            <label class="show-place">Local: Morumbi</label>
+                            <p class="activity-text">
+                                Sucesso no Brasil todo, o grupo vai realizar um
+                                show de dança moderno, cheio de acrobacia e gingado.
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li class="table-view-cell media" id="evento-3">
+                    <a class="navigate-right" onclick="addEvent('evento-3')">
+                        <img class="media-object pull-left" src="http://placehold.it/42x42">
+                        <div class="media-body" data-img="/virada-cultural/images/anitta.jpg">
+                            <label class="show-hour">Dia todo</label>
+                            <label class="show-name">Show da Carreta Furacão</label>
+                            <label class="show-place">Local: Morumbi</label>
+                            <p class="activity-text">
+                                Sucesso no Brasil todo, o grupo vai realizar um
+                                show de dança moderno, cheio de acrobacia e gingado.
+                            </p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script class="js-custom">
+        var list = document.querySelector('.planning');
+        var addButton = document.getElementById('add-event');
+        var modal = document.getElementById('modalAtracao');
+
+        function createEventItem(name, hour, place, imgSrc) {
+            var elementString = `
+                <li>
+                    <img src="${imgSrc}" class="show-pic" />
+                    <div class="show-desc">
+                        <label class="show-hour">${hour}</label>
+                        <label>${name}</label>
+                        <label>${place}</label>
+                    </div>
+                </li>`;
+
+            var div = document.createElement('div');
+            div.innerHTML = elementString;
+            return div.firstElementChild;
+        }
+
+        function addEvent(id) {
+            var container = document.getElementById(id);
+            var data = container.querySelector('.media-body');
+            var hour = data.querySelector('.show-hour').innerText;
+            var name = data.querySelector('.show-name').innerText;
+            var place = data.querySelector('.show-place').innerText;
+            var imgSrc = data.getAttribute('data-img');
+
+            // Cria o elemento e adiciona no planejamento
+            var item = createEventItem(name, hour, place, imgSrc);
+            list.insertBefore(item, addButton);
+
+            // Remove o evento da lista de disponíveis
+            container.parentNode.removeChild(container);
+
+            modal.classList.remove('active');
+        }
+    </script>
 </div>
 </body>
 </html>

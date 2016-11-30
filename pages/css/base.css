@@ -178,3 +178,12 @@
 .menu-i-planning .menu-link {
     margin-left: -1em;
 }
+
+/* Utilidade */
+.block {
+    display: block;
+}
+
+.bold {
+    font-weight: bold;
+}
