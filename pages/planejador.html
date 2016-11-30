@@ -1,0 +1,54 @@
+<html>
+<head>
+
+    <title>Virada Cultural</title>
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <!-- Evitar problemas com caracteres latinos -->
+    <meta charset="UTF-8">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link type="text/css" rel="stylesheet" href="../ratchet-2.0.2/dist/css/ratchet.min.css"/>
+    <link type="text/css" rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css" />
+    <script src="../ratchet-2.0.2/dist/js/ratchet.min.js"></script>
+
+    <script src="../js/notification.js"></script>
+
+    <link rel="stylesheet" href="css/base.css" />
+
+    <link rel="stylesheet" href="css/planejador.css" />
+</head>
+
+<body>
+<header class="bar bar-nav">
+    <h1 class="title">Planejador</h1>
+    <button id="menu-trigger" class="menu-trigger"><span class="fa fa-circle"></span></button>
+</header>
+<div class="content">
+    <ul class="planning">
+        <li>
+            <img src="/virada-cultural/images/anitta.jpg" class="show-pic" />
+            <div class="show-desc">
+                <label class="show-hour">13:00 - 14:00</label>
+                <label>Show da Anitta</label>
+                <label>Palco 4 - Morumbi</label>
+            </div>
+        </li>
+        <li id="add-event" class="add-event-item">
+            <div class="show-pic">
+                <span class="add-event-btn fa fa-plus-circle"></span>
+            </div>
+            <div class="show-desc add-event-text">
+                <label class="add-event-desc">Adicionar um evento</label>
+            </div>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
+<script src="../js/os.js"></script>
+<script src="../js/menu.js"></script>

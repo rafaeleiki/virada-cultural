@@ -1,0 +1,77 @@
+.planning {
+    display: block;
+    padding: 0;
+}
+
+.planning:before {
+    content: '';
+    border-left: 2px #3f1743 solid;
+    height: 100%;
+    left: 4.7em;
+    position: absolute;
+    z-index: 1;
+}
+
+.planning li {
+    display: block;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 40px;
+}
+
+.planning li:nth-child(odd) {
+    background-color: #D6C0E6;
+}
+
+.planning li:nth-child(even) {
+    background-color: #f4f9f7;
+}
+
+.show-pic {
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 2px #3f1743 solid;
+    background-color: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+.show-desc {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 0.5em;
+}
+
+.show-desc label {
+    display: block;
+}
+
+.add-event-btn {
+    display: block;
+    text-align: center;
+    line-height: 5rem;
+    font-size: 3rem;
+    color: #1f48ff;
+}
+
+.add-event-item:active .add-event-btn {
+    color: #122994;
+}
+
+.add-event-text {
+    vertical-align: super;
+}
+
+.add-event-desc {
+    margin-top: -1em;
+}
+
+.show-hour {
+    background-color: #ac00e6;
+    color: #fff;
+    border-radius: 0.25em;
+    text-align: center;
+    font-weight: bold;
+}
