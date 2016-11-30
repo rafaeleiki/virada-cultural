@@ -58,7 +58,7 @@
         <div class="content">
             <ul class="table-view">
                 <li class="table-view-cell media" id="evento-1">
-                    <a class="navigate-right" onclick="addEvent('evento-1')">
+                    <a class="navigate-right add-event-link">
                         <img class="media-object pull-left" src="http://placehold.it/42x42">
                         <div class="media-body" data-img="/virada-cultural/images/anitta.jpg">
                             <label class="show-hour">15:00-15:45</label>
@@ -72,7 +72,7 @@
                     </a>
                 </li>
                 <li class="table-view-cell media" id="evento-2">
-                    <a class="navigate-right" onclick="addEvent('evento-2')">
+                    <a class="navigate-right add-event-link">
                         <img class="media-object pull-left" src="http://placehold.it/42x42">
                         <div class="media-body" data-img="/virada-cultural/images/anitta.jpg">
                             <label class="show-hour">15:00-15:45</label>
@@ -86,7 +86,7 @@
                     </a>
                 </li>
                 <li class="table-view-cell media" id="evento-3">
-                    <a class="navigate-right" onclick="addEvent('evento-3')">
+                    <a class="navigate-right add-event-link">
                         <img class="media-object pull-left" src="http://placehold.it/42x42">
                         <div class="media-body" data-img="/virada-cultural/images/anitta.jpg">
                             <label class="show-hour">Dia todo</label>
@@ -140,6 +140,12 @@
 
             modal.classList.remove('active');
         }
+
+        document.querySelectorAll('.add-event-link').forEach(function (e, index) {
+            e.addEventListener('click', function () {
+                addEvent(`evento-${index + 1}`);
+            });
+        });
     </script>
 </div>
 </body>
