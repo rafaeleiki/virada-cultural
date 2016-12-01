@@ -95,17 +95,21 @@
           </button>
     </div>
     <br><br><br><br><br><br>
-    <div class="popup" onclick="myFunction()">Click me to toggle the popup!
+    <div class="popup" id="popup-trigger">Click me to toggle the popup!
         <span class="popuptext" id="myPopup">A Simple Popup!</span>
     </div>
     
-    <script>
-// When the user clicks on div, open the popup
-function myFunction() {
-    var popup = document.getElementById('myPopup');
-    popup.classList.toggle('show');
-}
-</script>
+    <script class="js-custom">
+        // When the user clicks on div, open the popup
+        function showPopUp() {
+            var popup = document.getElementById('myPopup');
+            popup.classList.toggle('show');
+        }
+
+        document.getElementById('popup-trigger').addEventListener('touchend', function () {
+            showPopUp();
+        });
+    </script>
 
 </body>
 </html>

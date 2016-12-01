@@ -7,6 +7,10 @@ var Notification = (function() {
 
     var notification = {
         show: function (message) {
+            var oldNotification = document.body.querySelector('.notification');
+            if (oldNotification) {
+                oldNotification.parentNode.removeChild(oldNotification);
+            }
             document.body.appendChild(this.createNotification(message));
         },
         createNotification: function (message) {

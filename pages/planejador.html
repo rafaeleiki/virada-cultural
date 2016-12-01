@@ -142,7 +142,7 @@
         }
 
         document.querySelectorAll('.add-event-link').forEach(function (e, index) {
-            e.addEventListener('click', function () {
+            e.addEventListener('touchend', function () {
                 addEvent(`evento-${index + 1}`);
             });
         });

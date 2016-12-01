@@ -32,9 +32,9 @@
 </header>
 <div class="content" style="margin: 10px 10px 10px 10px; ">
     <button id="menu-trigger" class="menu-trigger"><span class="fa fa-circle"></span></button>
-    <a href="#myModalexample" class="btn btn-find" id="myBtn" style="position:inline;">Buscar novos amigos</a>
+    <a href="#modalAmizade" class="btn btn-find" id="new-friends" style="position:inline;">Buscar novos amigos</a>
 
-    <div id="myModalexample" class="modal modal-small">
+    <div id="modalAmizade" class="modal modal-small">
         <div class="padded">
             <h1 style="font-size:22px; font-weight:bold; color:white;">Nova Sugestão de amizade</h1>
             <img class="profile-pic" src="/virada-cultural/images/mariot.jpg">
@@ -65,12 +65,12 @@
 
         </div>
         <h1 style="font-size:20px; padding-top:10px; color:white; text-align:center;">Deseja enviar solicitação de amizade?</h1>
-        <button class="btn btn-yes">
+        <a href="#modalAmizade" class="btn btn-yes" id="add-friend">
             <span class="icon icon-check"></span>
-        </button>
-        <button class="btn btn-no">
+        </a>
+        <a href="#modalAmizade" class="btn btn-no" id="cancel-friend">
             <span class="icon icon-close"></span>
-        </button>
+        </a>
 
     </div>
 
@@ -88,9 +88,29 @@
     </div>
 
     <script class="js-custom">
-        setTimeout(function () {
-            Notification.show('Você recebeu 5 pontos por jogar a lata de alumínio no lugar certo!');
-        }, 2000);
+        (function() {
+            var newFriends = document.getElementById('new-friends');
+
+            function deactivateFriendsFinder() {
+                newFriends.href = '#';
+                newFriends.addEventListener('touchend', function () {
+                    Notification.show('No momento não possuimos sugestão de amigos, tente novamente mais tarde');
+                });
+            }
+
+            document.getElementById('cancel-friend').addEventListener('touchend', function () {
+                deactivateFriendsFinder();
+            });
+
+            document.getElementById('add-friend').addEventListener('touchend', function () {
+                deactivateFriendsFinder();
+                Notification.show('Solicitação de amizade enviada a Mário!');
+            });
+
+            setTimeout(function () {
+                Notification.show('Você recebeu 5 pontos por jogar a lata de alumínio no lugar certo!');
+            }, 2000);
+        })();
     </script>
 </div>
     
