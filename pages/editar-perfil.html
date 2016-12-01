@@ -26,7 +26,7 @@
 <body>
 <header class="bar bar-nav" style="background-color:#E84855">
     <a class="icon icon-left-nav pull-left" style="color:white" href="login.html" data-transition="slide-out"></a>
-     <a class="icon pull-right"><span class="fa fa-question" style="color: white;"></span></a>
+    <a class="icon pull-right"><span class="fa fa-question" style="color: white;"></span></a>
     <h1 class="title">Perfil</h1>
 </header>
 <div class="content profile-content">
@@ -34,9 +34,13 @@
     <div class="pic-header">
         <img class="profile-pic" src="/virada-cultural/images/juliam.jpg">
         <ul class="profile-data">
-            <li class="profile-username" id="name">Júlia M.</li>
+            <li class="profile-username">
+                <input type="text" id="name" class="edit-profile-input" value="Júlia M." />
+            </li>
             <li>1046 pontos</li>
-            <li id="desc">"Eu mesma, Júlia Mello"</li>
+            <li>
+                <input type="text" id="desc" value='"Eu mesma, Júlia Mello"' class="edit-profile-input"/>
+            </li>
             <p>
                 <span class="fa-stack fa-lg profile-social-icon">
                     <i class="fa fa-circle fa-stack-2x icon-bg"></i>
@@ -53,12 +57,17 @@
                     <i class="fa fa-instagram fa-stack-1x fa-inverse logo"></i>
                 </span>
 
-                <a href="editar-perfil.html">
+                <a href="perfil.html" id="cancel">
                     <span class="fa-stack fa-lg profile-social-icon">
-                        <i class="fa fa-circle fa-stack-2x icon-bg"></i>
-                        <i class="fa fa-pencil fa-stack-1x fa-inverse logo"></i>
+                        <i class="fa fa-circle fa-stack-2x icon-bg cancel-bg"></i>
+                        <i class="fa fa-times fa-stack-1x logo check-content"></i>
                     </span>
                 </a>
+
+                <span class="fa-stack fa-lg profile-social-icon" id="edit">
+                    <i class="fa fa-circle fa-stack-2x icon-bg check-bg"></i>
+                    <i class="fa fa-check fa-stack-1x logo check-content"></i>
+                </span>
             </p>
         </ul>
         <br>
@@ -119,22 +128,30 @@
             </ul>
         </span>
     </div>
-
     <script class="js-custom">
         (function () {
-            setTimeout(function () {
-                Notification.show('Você recebeu 10 pontos!');
-            }, 5000);
+            var cancel = document.getElementById('cancel');
 
+            document.getElementById('edit').addEventListener('click', function (e) {
+                var name = document.getElementById('name').value;
+                var desc = document.getElementById('desc').value;
+
+                localStorage.setItem('user-name', name);
+                localStorage.setItem('user-desc', desc);
+
+                PUSH({ url: 'perfil.html' });
+            });
+
+            /* Coloca o valor certo no nome */
             var name = localStorage.getItem('user-name');
             var desc = localStorage.getItem('user-desc');
 
             if (name) {
-                document.getElementById('name').innerText = name;
+                document.getElementById('name').value = name;
             }
 
             if (desc) {
-                document.getElementById('desc').innerText = desc;
+                document.getElementById('desc').value = desc;
             }
         })();
     </script>

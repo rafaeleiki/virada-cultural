@@ -103,3 +103,21 @@
 .time-table-body{
     padding:10px;
 }
+
+/* Editar o perfil */
+.edit-profile-input {
+    background-color: rgba(255, 255, 255, 0.7) !important;
+    border: red solid 1px !important;
+}
+
+.check-bg {
+    color: #2ac845 !important;
+}
+
+.cancel-bg {
+    color: red !important;
+}
+
+.check-content {
+    color: #fff !important;
+}
