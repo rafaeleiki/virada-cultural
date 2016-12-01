@@ -1,0 +1,84 @@
+<html>
+<head>
+
+    <title>Virada Cultural</title>
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <!-- Evitar problemas com caracteres latinos -->
+    <meta charset="UTF-8">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link type="text/css" rel="stylesheet" href="../ratchet-2.0.2/dist/css/ratchet.min.css"/>
+    <link type="text/css" rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css" />
+    <script src="../ratchet-2.0.2/dist/js/ratchet.min.js"></script>
+
+    <script src="../js/notification.js"></script>
+
+    <link rel="stylesheet" href="css/base.css" />
+    <link type="text/css" rel="stylesheet" href="css/perfil.css" />
+
+</head>
+
+<body>
+<header class="bar bar-nav" style="background-color:#E84855">
+    <a class="icon icon-left-nav pull-left" style="color:white" href="amigos.html" data-transition="slide-out"></a>
+     <a class="icon pull-right"><span class="fa fa-question" style="color: white;"></span></a>
+    <h1 class="title">Perfil</h1>
+</header>
+<div class="content profile-content">
+    <button id="menu-trigger" class="menu-trigger"><span class="fa fa-circle"></span></button>
+    <div class="pic-header">
+        <img class="profile-pic" src="/virada-cultural/images/mariot.jpg">
+        <ul class="profile-data">
+            <li class="profile-username">Mário T.</li>
+            <li><i>Vocês tem 4 atrações em comum no cronograma</i></li>
+            <li>"To aqui pra causar"</li>
+            <p>
+                <span class="fa-stack fa-lg profile-social-icon">
+                    <i class="fa fa-circle fa-stack-2x icon-bg"></i>
+                    <i class="fa fa-facebook fa-stack-1x fa-inverse logo"></i>
+                </span>
+
+                <span class="fa-stack fa-lg profile-social-icon">
+                    <i class="fa fa-circle fa-stack-2x icon-bg"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse logo"></i>
+                </span>
+
+                <span class="fa-stack fa-lg profile-social-icon">
+                    <i class="fa fa-circle fa-stack-2x icon-bg"></i>
+                    <i class="fa fa-instagram fa-stack-1x fa-inverse logo"></i>
+                </span>
+            </p>
+        </ul>
+        <br>
+    </div>
+
+    <div class="segmented-control" style="margin-top:10px; border:none;">
+        <a class="control-item active profile-tab" href="#item1mobile" style="background-color:#1aa3ff ">
+            Cronograma
+        </a>
+        <a class="control-item profile-tab" href="#item2mobile" style="background-color: #FF6663">
+            Grafitti Digital
+        </a>
+    </div>
+    <div class="aba">
+        <span id="item1mobile" class="control-content active" style="background-color:#1aa3ff">
+            <div class="time-table-body">
+            <img src="/virada-cultural/images/cronograma.png" width=100%;>
+            </div>
+        </span>
+        <span id="item2mobile" class="control-content" style="background-color: #FF6663">
+            <div class="graffiti-description">
+                O conteúdo dessa área é restrito a amigos
+            </div>
+        </span>
+    </div>
+</div>
+</body>
+</html>
+<script src="../js/os.js"></script>
+<script src="../js/menu.js"></script>

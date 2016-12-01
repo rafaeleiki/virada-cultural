@@ -34,7 +34,7 @@ width: 100%;
     font-weight: bold;
 }
 
-.profile-pic {
+.new-friend-profile-pic {
     width: 100px;
     height: 100px;
     
@@ -45,7 +45,7 @@ width: 100%;
     border: #666 1px solid;
 }
 
-.profile-data {
+.new-friend-profile-data {
     display: inline-block;
     list-style: none;
     padding-left: 0%;
