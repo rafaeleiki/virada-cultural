@@ -12,7 +12,7 @@
     z-index: 1;
 }
 
-.planning li {
+.planning li:not(.add-event-item) {
     display: block;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
@@ -54,6 +54,17 @@
     line-height: 5rem;
     font-size: 3rem;
     color: #1f48ff;
+}
+
+.add-event-item {
+    display: block;
+}
+
+.add-event-item > a {
+    display: block;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 40px;
 }
 
 .add-event-item:active .add-event-btn {
