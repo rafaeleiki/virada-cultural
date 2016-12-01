@@ -30,7 +30,7 @@
     font-weight: bold;
     font-size: 1.5rem;
     position: absolute;
-    bottom: 5em;
+    bottom: 3em;
     text-align: center;
     display: block;
     line-height: 2rem;
@@ -77,12 +77,12 @@
 }
 
 .tutorial-decoration-image {
-    width: 320px;
-    height: 320px;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
     border-radius: 50%;
     display: block;
-    margin: 3em auto;
+    margin: 1.5em auto;
 }
 
 .tutorial-drag {
