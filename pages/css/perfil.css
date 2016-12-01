@@ -25,6 +25,7 @@
     padding-left: 0%;
     margin-left: 5%;
     vertical-align: bottom;
+    max-width: calc(85% - 100px);
 }
 
 .profile-social-icon {
