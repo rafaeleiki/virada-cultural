@@ -51,10 +51,26 @@
     font-size: 17px;
     background-color: #2978A0;
     border-radius: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px 10px;
+}
+
+.graffiti-like {
+    background-color: #fff;
+    display: block;
+    color: #000;
+    padding: 0.2em 0.5em;
+}
+
+.like-btn {
+    color: red;
+    margin: 0 0.5em;
+}
+
+.graffiti-text {
+    color: #fff;
+    font-size: 17px;
+    text-align: justify;
+    margin-top: 0.5em;
 }
 
 .profile-pic {
