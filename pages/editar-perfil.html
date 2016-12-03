@@ -88,7 +88,7 @@
         <span id="item1mobile" class="control-content active" style="background-color:#7AC74F">
             <div class="time-table-body">
                 <div class="title-edit">Quem pode me procurar:</div>
-                <ul class="table-view friends-view">
+                <ul class="table-view options-view">
                     <li class="table-view-cell">
                         Homens
                         <div class="toggle">
@@ -110,16 +110,20 @@
                 </ul>
             </div>
         </span>
-        <span id="item2mobile" class="control-content" style="background-color: #FF6663">
-            <br>
-            <div class="title-edit">Quem ver meus Grafittis:</div>
-            <select class="select-style">
-                
-              <option value="todos">Todos</option>
-              <option value="amigos">Apenas Amigos</option>
-              <option value="eu">Apenas eu</option>
-            </select>
-            <br>
+        <span id="item2mobile" class="control-content time-table-body" style="background-color: #FF6663">
+            <div class="title-edit">Quem pode ver meus Grafittis:</div>
+            <ul class="table-view options-view">
+                <li class="table-view-cell active-privacy" name="privacy">
+                    <span class="fa fa-globe"></span> Todos
+                </li>
+                <li class="table-view-cell" name="privacy">
+                    <span class="fa fa-user"></span> Meus amigos
+                </li>
+                <li class="table-view-cell" name="privacy">
+                    <span class="fa fa-lock"></span> Apenas eu
+                </li>
+            </ul>
+
             <div class="profile-graffiti-box"><p style="font-size:14px;line-height: 0.8">Adicionado 24/06/2017, 17h03</p>
                 <img src="/virada-cultural/images/g1.jpg" style="width:100%">
                 <div class="graffiti-description">
@@ -167,6 +171,21 @@
             if (desc) {
                 document.getElementById('desc').value = desc;
             }
+
+            /* Alteração de privacidade */
+            var privacy = document.getElementsByName('privacy');
+            function checkPrivacy(triggerElement) {
+                privacy.forEach(function (element) {
+                    element.classList.remove('active-privacy');
+                });
+                triggerElement.classList.add('active-privacy');
+            }
+
+            privacy.forEach(function (element) {
+               element.addEventListener('touchend', function () {
+                   checkPrivacy(element);
+               })
+            });
         })();
     </script>
 </div>

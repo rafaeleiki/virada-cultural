@@ -105,12 +105,12 @@
 
 /*Cronograma*/
 .time-table-body{
-    padding:10px;
+    padding: 0 10px 10px;
     color:white;
 }
 
-.friends-view {
-    background-color: #7AC74F;
+.options-view {
+    background-color: transparent;
 }
 
 /* Editar o perfil */
@@ -131,19 +131,16 @@
     color: #fff !important;
 }
 
-.title-edit{
+.title-edit {
     color:white;
     font-size: 20px;
     font-weight: bold;
     padding-bottom: 0.5em;
+    padding-left: 0.5em;
+    padding-top: 10px;
 }
 
-/*.select-style{*/
-    /*width: 80%;*/
-    /*border: none;*/
-    /*height:30px;*/
-    /*line-height: 30px;*/
-    /*border-radius: 4px;*/
-    /*height: 20px;*/
-    /*font-size: 15px;*/
-/*}*/
+.active-privacy {
+    background-color: #fff;
+    color: #FF6663;
+}
