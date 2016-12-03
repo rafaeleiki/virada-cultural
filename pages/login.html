@@ -35,17 +35,39 @@
 </header>
 <div class="content home-content">
     <button id="menu-trigger" class="menu-trigger"><span class="fa fa-circle"></span></button>
-    <div id="login" class="login-container">
+    <div class="login-container">
         <div class="home-overlay"></div>
+        <div id="loading" class="load-overlay">
+            <span class="fa fa-spin fa-spinner load-icon"></span>
+        </div>
 
         <form class="login input-group">
             <input type="text" placeholder="Nome de usuário ou email">
             <input type="password" placeholder="Senha">
-            <button class="btn btn-positive btn-block">Entrar</button>
+            <a id="login" href="main.html" class="btn btn-positive btn-block" data-transition="slide-in">Entrar</a>
         </form>
 
         <button class="btn btn-block">Problemas para entrar?</button>
     </div>
+
+    <script class="js-custom">
+        var loadingOverlay = document.getElementById('loading');
+
+        function checkLogin() {
+            var loggedIn = localStorage.getItem('login');
+            if (loggedIn) {
+                PUSH({ url: 'main.html' });
+            } else {
+                loadingOverlay.parentNode.removeChild(loadingOverlay);
+            }
+        }
+
+        document.getElementById('login').addEventListener('touchend', function () {
+           localStorage.setItem('login', true);
+        });
+
+        checkLogin();
+    </script>
 </div>
 </body>
 
