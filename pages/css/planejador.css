@@ -100,3 +100,7 @@
 .activity-text {
     text-align: justify;
 }
+
+.event-search {
+    border-radius: 0 !important;
+}

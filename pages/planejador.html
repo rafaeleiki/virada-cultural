@@ -58,11 +58,12 @@
         </header>
 
         <div class="content">
+            <input type="search" id="search" class="event-search" placeholder="Pesquisar por nome da atração ou local">
             <ul class="table-view">
-                <li class="table-view-cell media" id="evento-1">
+                <li class="table-view-cell media" id="evento-1" name="event">
                     <a class="navigate-right add-event-link">
                         <img class="media-object pull-left" src="http://placehold.it/42x42">
-                        <div class="media-body" data-img="/virada-cultural/images/anitta.jpg">
+                        <div class="media-body" data-img="/virada-cultural/images/anitta.jpg" id="atracao-1">
                             <label class="show-hour">15:00-15:45</label>
                             <label class="show-name">Show da Carreta Furacão</label>
                             <label class="show-place">Local: Morumbi</label>
@@ -73,12 +74,12 @@
                         </div>
                     </a>
                 </li>
-                <li class="table-view-cell media" id="evento-2">
+                <li class="table-view-cell media" id="evento-2" name="event">
                     <a class="navigate-right add-event-link">
                         <img class="media-object pull-left" src="http://placehold.it/42x42">
-                        <div class="media-body" data-img="/virada-cultural/images/anitta.jpg">
+                        <div class="media-body" data-img="/virada-cultural/images/anitta.jpg" id="atracao-2">
                             <label class="show-hour">15:00-15:45</label>
-                            <label class="show-name">Show da Carreta Furacão</label>
+                            <label class="show-name">Banda Uó</label>
                             <label class="show-place">Local: Morumbi</label>
                             <p class="activity-text">
                                 Sucesso no Brasil todo, o grupo vai realizar um
@@ -87,13 +88,13 @@
                         </div>
                     </a>
                 </li>
-                <li class="table-view-cell media" id="evento-3">
+                <li class="table-view-cell media" id="evento-3" name="event">
                     <a class="navigate-right add-event-link">
                         <img class="media-object pull-left" src="http://placehold.it/42x42">
-                        <div class="media-body" data-img="/virada-cultural/images/anitta.jpg">
+                        <div class="media-body" data-img="/virada-cultural/images/anitta.jpg" id="atracao-3">
                             <label class="show-hour">Dia todo</label>
-                            <label class="show-name">Show da Carreta Furacão</label>
-                            <label class="show-place">Local: Morumbi</label>
+                            <label class="show-name">Alcione</label>
+                            <label class="show-place">Local: Butantã</label>
                             <p class="activity-text">
                                 Sucesso no Brasil todo, o grupo vai realizar um
                                 show de dança moderno, cheio de acrobacia e gingado.
@@ -188,6 +189,60 @@
             e.addEventListener('touchend', function () {
                 addEvent(`evento-${index + 1}`);
             });
+        });
+
+        var shownElements = [];
+
+        // Funcionalidade de pesquisa
+        function search(text) {
+            document.querySelectorAll('.show-name').forEach(function (element) {
+                searchInElement(element, text);
+            });
+            document.querySelectorAll('.show-place').forEach(function (element) {
+                searchInElement(element, text);
+            });
+        }
+
+        function searchInElement(element, text) {
+            if (element.innerText.toLowerCase().indexOf(text) >= 0) {
+                var elementFound = element.parentNode;
+                if (shownElements.indexOf(elementFound) < 0) {
+                    shownElements.push(elementFound);
+                }
+            }
+        }
+
+        function findContainer(element) {
+            while (element.getAttribute('name') != 'event') {
+                element = element.parentNode;
+            }
+            return element;
+        }
+
+        function setFoundElementsDisplay(display) {
+            shownElements.forEach(function (element) {
+                findContainer(element).style.display = display;
+            })
+        }
+
+        function setAllElementsDisplay(display) {
+            document.querySelectorAll('.show-name').forEach(function (element) {
+                findContainer(element).style.display = display;
+            });
+        }
+
+        var searchField = document.getElementById('search');
+        searchField.addEventListener('keyup', function () {
+            var text = searchField.value;
+            shownElements = [];
+            
+            if (text === '') {
+                setAllElementsDisplay('block');
+            } else {
+                search(text.toLowerCase());
+                setAllElementsDisplay('none');
+                setFoundElementsDisplay('block');
+            }
         });
     </script>
 </div>
