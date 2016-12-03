@@ -13,7 +13,7 @@
 
 /* Help */
 .help-content {
-    background-color: #1f48ff;
+    background-color: #2978A0;
     width: 100%;
     min-height: 100%;
     color: #fff;
@@ -22,7 +22,8 @@
 .help-content summary {
     padding: 0.5em 1em;
     font-weight: bold;
-    background-color: #1f48ff;
+    font-size: 18px;
+    background-color: #2978A0;
     color: #fff;
 }
 
@@ -31,15 +32,22 @@
 }
 
 .help-content details p {
-    background-color: #f1f6ff;
+    background-color: white;
     color: #000;
     padding: 0.5em 0.5em;
     margin-bottom: 0;
 }
 
 .help-content details[open] summary {
-    color: #1f48ff;
+    color: #2978A0;
+    
+    font-size: 18px;
     background-color: #fff;
+}
+
+.help-nav {
+    background-color: #FF6663;
+    border: none;
 }
 
 /* Notificação */
