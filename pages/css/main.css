@@ -11,9 +11,91 @@
     font-weight: bold;
     font-size: 30px;
     margin-top: 10px;
+    margin-bottom: 20px;
     padding: 0.5em;
     height: 15%;
-    z-index: -1;
-    background-image: url("../images/virada.jpg");
+    background-image: url("/virada-cultural/images/palco.jpeg");
     background-size: cover;
+    background-position: 50% 60%;
+}
+
+
+.main-content{
+    margin: 10px;
+}
+
+.now-playing-header {
+    color: white;
+    padding: 0.5em;
+    background-color: #FF6663;
+}
+
+.now-playing-data {
+    display: inline-block;
+    list-style: none;
+    padding-left: 0%;
+    margin-left: 5%;
+    vertical-align: bottom;
+    max-width: calc(85% - 100px);
+}
+
+
+.now-playing-pic {
+    width: 100px;
+    height: 100px;
+    
+    vertical-align: top;
+    margin-top: 5%;
+    margin-left: 5%;
+    border-radius: 50%;
+    background-color: #fff;
+    border: #666 1px solid;
+}
+
+.artist {
+    font-size:25px;
+    margin-top: 5px;
+    margin-bottom:10px;
+    font-weight: bold;
+}
+
+.title-np {
+    font-size:25px;
+}
+
+.btn-see-all{
+    height: 40px;
+    font-size: 17px;
+}
+
+.friends-here-header {
+    color: white;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0.5em;
+    background-color: #1aa3ff;
+}
+
+.friends-here-pic {
+    width: 80px;
+    height: 80px;
+    padding: 0;
+    vertical-align: top;
+    margin-top: 5%;
+    margin-left: 5%;
+    border-radius: 50%;
+    background-color: #fff;
+    border: #666 1px solid;
+}
+
+.btn-audio {
+  color: white;
+  border-radius: 5px;
+  background-color: #E84855;
+  border: 1px solid #E84855;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width:100%;
+  font-size:25px;
 }

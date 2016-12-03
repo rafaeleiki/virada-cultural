@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="css/graffiti.css" />
     <link rel="stylesheet" href="css/amigos.css" />
     <link rel="stylesheet" href="css/componentes.css" />
+    <link rel="stylesheet" href="css/planejador.css" />
     <link rel="stylesheet" href="css/main.css" />
     
 </head>
@@ -38,10 +39,28 @@
 <div class="content">
     <button id="menu-trigger" class="menu-trigger"><span class="fa fa-circle"></span></button>
     <div class="currently-header">
-        Você está:
+        Você está no:
     </div>
-    <div class="currently-stage">
+    <div class="currently-stage" >
         Palco Arrouche
+    </div>
+    
+    <div class="main-content">
+        <div class="now-playing-header">
+            <div class="title-np">A seguir:</div>
+            <img src="/virada-cultural/images/anitta.jpg" class="now-playing-pic" /> 
+            <ul class="now-playing-data">
+                <li>19h:</li>
+                <li class="artist">Anitta</li>
+                <li> <button class="btn btn-see-all">Ver programação completa</button></li>
+            </ul>
+        </div>
+
+        <div class="friends-here-header">
+        Amigos nesse palco:
+            <br><a href="perfil2.html" data-transition="slide-in"><img src="/virada-cultural/images/fabios.jpg" class="btn friends-here-pic" ></a>
+        </div>
+        <button class="btn btn-audio"> <i class="fa fa-deaf" aria-hidden="true"></i> Ativar descrição sonora</button>
     </div>
 </div>
 </body>
