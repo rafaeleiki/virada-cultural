@@ -109,6 +109,10 @@
     color:white;
 }
 
+.friends-view {
+    background-color: #7AC74F;
+}
+
 /* Editar o perfil */
 .edit-profile-input {
     background-color: rgba(255, 255, 255, 0.7) !important;
@@ -131,14 +135,15 @@
     color:white;
     font-size: 20px;
     font-weight: bold;
+    padding-bottom: 0.5em;
 }
 
-.select-style{
-    width: 80%;
-    border: none;
-    height:30px;
-    line-height: 30px;
-    border-radius: 4px;
-    height: 20px;
-    font-size: 15px;
-}
+/*.select-style{*/
+    /*width: 80%;*/
+    /*border: none;*/
+    /*height:30px;*/
+    /*line-height: 30px;*/
+    /*border-radius: 4px;*/
+    /*height: 20px;*/
+    /*font-size: 15px;*/
+/*}*/
