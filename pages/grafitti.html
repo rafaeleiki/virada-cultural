@@ -24,8 +24,10 @@
 <body>
 
 <header class="bar bar-nav" style="background-color:#1aa3ff">
-    <a class="icon icon-left-nav pull-left" style="color:white" href="login.html" data-transition="slide-out"></a>
-    <a class="icon pull-right"><span class="fa fa-question" style="color: white;"></span></a>
+    <a class="icon icon-left-nav pull-left" style="color:white" href="main.html" data-transition="slide-out"></a>
+    <a href="#modalAjuda" class="icon pull-right">
+        <span class="fa fa-question" style="color: white;"></span>
+    </a>
     <h1 class="title">Graffiti Digital</h1>
 </header>
 
@@ -89,8 +91,46 @@
             uma fotinha mesmo com sono S2 haha
         </p>
         <button class="btn btn-map" style="position:inline;">Ver no mapa</button>
+    </div></div>
+        <div id="modalAjuda" class="modal">
+        <header class="bar bar-nav help-nav">
+            <a class="icon icon-close pull-right" href="#modalAjuda"></a>
+            <h1 class="title">Ajuda</h1>
+        </header>
+        <div class="content">
+            <div class="help-content">
+                <details>
+                    <summary>O que é Grafitti Digital?</summary>
+                    <p>
+                        Grafitti Digital são projeções de imagens feitas pelos postes da cidade. Qualquer um pode enviar uma história, arte, ou relato de um momento especial.
+                    </p>
+                </details>
 
-    </div>
+                 <details>
+                    <summary>Como posso ver os grafittis?</summary>
+                    <p>
+                        Os grafittis são projetador por postes durante a noite. Andando pela cidade, você poderá encontrá-los em quaisquer locais. Ao se aproximar de um, o aplicativo te avisará, para que você possa ver mais detalhes sobre ele nessa página.
+                    </p>
+                </details>
+                
+                <details>
+                    <summary>Como eu envio um grafitti digital?</summary>
+                    <p>
+                        Ao clicar no botão, uma caixa irá se abrir na tela. Você pode escrever um texto, clicando no botão de lápis, e enviar uma imagem do seu celular, clicando no botão de câmera. Quando estiver satisfeito, clique em "Próximo". Para posicionar o grafitti, aponte para o poste de luz que desejar, que irá projetar automaticamente sua imagem. Nesse estágio, o grafitti é apenas uma pré-visualização, e não esta pronto. Para fixá-lo no poste, clique em "Finalizar", e sua imagem ficará la permanentemente, para todos verem. 
+                    </p>
+                </details>
+
+                <details>
+                    <summary>O que posso enviar no Grafitti Digital?</summary>
+                    <p>
+                        A proposta do Grafitti é exibir as tantas histórias que se passam na cidade de São Paulo. Sinta-se livre para compartilhar momentos, fotos, selfies e artes feitas por você. Não serão aceitos conteúdos de teor pornográfico, criminal, homofóbico, racista, que infrinjam regras de copyright ou ofensivos em qualquer nível. Use o botão "Denunciar" para eliminar grafittis dessa natureza.
+                    </p>
+                </details>
+                
+            </div>
+        </div>
+
+
     <script class="js-custom">
         document.getElementById('go-to-2').addEventListener('touchend', function (event) {
             goToStep(2, event);
