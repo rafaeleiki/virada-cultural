@@ -26,7 +26,7 @@
 <body>
 <header class="bar bar-nav" style="background-color:#E84855">
     <a class="icon icon-left-nav pull-left" style="color:white" onclick="history.back();"></a>
-    <a class="icon pull-right"><span class="fa fa-question" style="color: white;"></span></a>
+    <a class="icon pull-right" href="#modalAjuda"><span class="fa fa-question" style="color: white;"></span></a>
     <h1 class="title">Perfil</h1>
 </header>
 <div class="content profile-content">
@@ -146,6 +146,47 @@
             
         </span>
     </div>
+
+    <!-- Ajuda -->
+    <div id="modalAjuda" class="modal">
+        <header class="bar bar-nav help-nav">
+            <a class="icon icon-close pull-right" href="#modalAjuda"></a>
+            <h1 class="title">Ajuda</h1>
+        </header>
+        <div class="content">
+            <div class="help-content">
+                <details>
+                    <summary>Como sei onde estou?</summary>
+                    <p>
+                        Sua posição atual é identificada por uma bolinha azul no mapa.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>O que são essas figuras no mapa?</summary>
+                    <p>
+                        As figuras indicam pontos de interesses, como banheiros, palcos, ambulatórios, entre outros. Clique na imagem para abrir uma explicação sobre o local.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>Como eu encontro os pontos de interesse?</summary>
+                    <p>
+                        Arraste o mapa para encontrar pontos de interesse perto de você. Você tambem pode clicar na barra de busca e outros pontos de interesse serão sugeridos. Clique no que deseja buscar e o aplicativo indicará o mais próximo de você.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>Como eu encontro locais onde acontecerão os eventos?</summary>
+                    <p>
+                        Use a barra de busca para achar palcos, casas de show, teatros, entre outros. O aplicativo mostrará o local no mapa e, se desejado, iniciar um trajeto até ele.
+                    </p>
+                </details>
+
+            </div>
+        </div>
+    </div>
+
     <script class="js-custom">
         (function () {
             var cancel = document.getElementById('cancel');
