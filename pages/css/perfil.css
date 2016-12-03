@@ -106,6 +106,7 @@
 /*Cronograma*/
 .time-table-body{
     padding:10px;
+    color:white;
 }
 
 /* Editar o perfil */
@@ -124,4 +125,20 @@
 
 .check-content {
     color: #fff !important;
+}
+
+.title-edit{
+    color:white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.select-style{
+    width: 80%;
+    border: none;
+    height:30px;
+    line-height: 30px;
+    border-radius: 4px;
+    height: 20px;
+    font-size: 15px;
 }
