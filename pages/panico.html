@@ -43,6 +43,48 @@
         <button id="police"><span class="panic-icon fa fa-shield"></span>Polícia</button>
     </div>
 
+    <!-- Ajuda -->
+    <div id="modalAjuda" class="modal">
+        <header class="bar bar-nav help-nav">
+            <a class="icon icon-close pull-right" href="#modalAjuda"></a>
+            <h1 class="title">Ajuda</h1>
+        </header>
+        <div class="content">
+            <div class="help-content">
+                <details>
+                    <summary>Para que serve a página de pânico?</summary>
+                    <p>
+                        Caso você tenha um caso de emergência, seja de saúde,
+                        casos de roubo, furto ou outros casos policiais,
+                        você pode usar os botões da página para chamar uma unidade
+                        na sua posição atual.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>O que acontece se eu chamar a ambulância?</summary>
+                    <p>
+                        A unidade de ambulância mais próxima vai ser encaminhada para sua
+                        localização. Os nossos agentes de saúde próximos também serão
+                        notificados, e você será atendido o mais rápido possível.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>Como funciona a chamada da polícia?</summary>
+                    <p>
+                        Se você tiver sofrido um roubo, furto, ou presenciou algum
+                        outro caso policial (casos de violência, por exemplo), chame
+                        a unidade policial mais próxima usando o botão "Polícia".
+                        Caso você tenha seu celular roubado, leve o seu identificador
+                        do evento para a unidade de atendimento "Virada Cultural" mais
+                        próxima de você. Com isso, seu dispositivo poderá ser rastreado.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </div>
+
     <script class="js-custom">
         function call(text) {
             Notification.show(`A ${text} foi chamada para sua posição atual`);
