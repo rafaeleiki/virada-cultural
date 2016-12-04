@@ -155,7 +155,7 @@
 
 .cc-name{
     width: 100%;
-    color: darkgray;
+    color: #4b4b4b;
     font-weight: bold;
     border-radius:3px;
     border:1px solid #ccc;
@@ -165,7 +165,7 @@
 .cc-number{
     display: inline-block;
     width: 20% !important;
-    color: darkgray;
+    color: #4b4b4b;
     font-weight: bold;
     border-radius:3px;
     border:1px solid #ccc;
