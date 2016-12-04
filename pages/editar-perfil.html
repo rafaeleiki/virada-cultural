@@ -103,10 +103,9 @@
                     </li>
                 </ul>
                 <div class="table-view-divider"></div>
-                <div id="slider-range" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
-                    <div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 7.6%; width: 52.4%;"></div>
-                    <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 7.6%;"></span>
-                    <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 60%;"></span>
+                <div data-role="rangeslider" id="slider">
+                    <input name="range-1a" id="range-1a" class="slider-range" min="0" max="100" value="0" type="number" />
+                    <input name="range-1b" id="range-1b" class="slider-range" min="0" max="100" value="100" type="number" />
                 </div>
                 <div class="title-edit">Buscar novos amigos:</div>
                 <ul class="table-view options-view">
@@ -235,6 +234,10 @@
 
     <script class="js-custom">
         (function () {
+            /* Slider */
+            $('#slider').rangeslider();
+
+            /* Conteúdo do perfil */
             var cancel = document.getElementById('cancel');
 
             document.getElementById('edit').addEventListener('touchend', function (e) {
