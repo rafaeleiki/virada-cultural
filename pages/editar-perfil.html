@@ -87,7 +87,7 @@
     <div class="aba">
         <span id="item1mobile" class="control-content active" style="background-color:#7AC74F">
             <div class="time-table-body">
-                <div class="title-edit">Quem pode me procurar:</div>
+                <div class="title-edit">Quem pode me achar:</div>
                 <ul class="table-view options-view">
                     <li class="table-view-cell">
                         Homens
@@ -101,9 +101,20 @@
                             <div class="toggle-handle"></div>
                         </div>
                     </li>
+                </ul>
+                <input type="text" id="amount" readonly="" style="border:0; color:#f6931f; font-weight:bold;">
+                <div id="slider-range" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"><div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 7.6%; width: 52.4%;"></div><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 7.6%;"></span><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 60%;"></span></div>
+                <div class="title-edit">Buscar novos amigos:</div>
+                <ul class="table-view options-view">
                     <li class="table-view-cell">
-                        Desconhecidos
+                        Homens
                         <div class="toggle">
+                            <div class="toggle-handle"></div>
+                        </div>
+                    </li>
+                    <li class="table-view-cell">
+                        Mulheres
+                        <div class="toggle active">
                             <div class="toggle-handle"></div>
                         </div>
                     </li>
@@ -143,7 +154,26 @@
         </span>
         <span id="item3mobile" class="control-content" style="background-color: #F7DC62">
             <div class="title-edit">Dados do cartão:</div>
+             <div class="cc-form">
+            Número:
+            <br>
+                <input class="cc-number" placeholder="* * * *">   <input class="cc-number" placeholder="* * * *">    <input class="cc-number" placeholder="* * * *">    <input class="cc-number" placeholder="* * * *">
+            <br><br>
+            Nome completo:
+            <br>
+            <input class="cc-name" placeholder="Julia T Mello"> 
+            <br><br>
+            Data de Vencimento:
+            <br>
+            <input class="cc-number" placeholder="10/23">
+            <br><br>
+            Código (no verso do cartão)
+            <br>
+            <input class="cc-number" placeholder="593">
+            </div>
             
+
+
         </span>
     </div>
 
@@ -156,30 +186,37 @@
         <div class="content">
             <div class="help-content">
                 <details>
-                    <summary>Como sei onde estou?</summary>
+                    <summary>O que é essa página?</summary>
                     <p>
-                        Sua posição atual é identificada por uma bolinha azul no mapa.
+                       Essa página é seu perfil na Virada Cultural. Nela se encontram informações públicas como seu cronograma, redes sociais e grafittis digitais. É possivel escolher quem pode ver seu perfil, editando no botão em forma de lápis. Informações privadas, como seu histórico de pagamento, são disponíveis apenas pra você.
                     </p>
                 </details>
 
                 <details>
-                    <summary>O que são essas figuras no mapa?</summary>
+                    <summary>Quem pode ver meu perfil?</summary>
                     <p>
-                        As figuras indicam pontos de interesses, como banheiros, palcos, ambulatórios, entre outros. Clique na imagem para abrir uma explicação sobre o local.
+                        Informações públicas como seu cronograma, redes sociais e grafittis digitais estão disponíveis para amigos e sugestões de amizade. É possivel escolher quem pode ver seu perfil, editando no botão em forma de lápis. Informações privadas, como seu histórico de pagamento, são disponíveis apenas pra você.
                     </p>
                 </details>
 
                 <details>
-                    <summary>Como eu encontro os pontos de interesse?</summary>
+                    <summary>Como posso editar meu perfil?</summary>
                     <p>
-                        Arraste o mapa para encontrar pontos de interesse perto de você. Você tambem pode clicar na barra de busca e outros pontos de interesse serão sugeridos. Clique no que deseja buscar e o aplicativo indicará o mais próximo de você.
+                        Clique no botão com o lápis verde, abaixo da sua descrição.
                     </p>
                 </details>
 
                 <details>
-                    <summary>Como eu encontro locais onde acontecerão os eventos?</summary>
+                    <summary>O que são os pontos?</summary>
                     <p>
-                        Use a barra de busca para achar palcos, casas de show, teatros, entre outros. O aplicativo mostrará o local no mapa e, se desejado, iniciar um trajeto até ele.
+                        Durante a Virada, os visitantes poderão acumular pontos de diversas formas: Visitando atrações, percorrendo trajetos em transporte público, jogando lixo na lixeira reciclável, jogando jogos disponíveis em certos locais, interagindo com a cidade, entre outros. Ao realizar alguma dessas atividades, a cidade irá comunicar ao seu celular que você ganhou pontos, e eles aparecerão em forma de notificação. Ao término do evento, será possível trocar os pontos por descontos nas marcas parceiras, ingressos pra eventos culturais, entre outros. 
+                    </p>
+                </details>
+                
+                <details>
+                    <summary>O que é o "Pagamento?"</summary>
+                    <p>
+                        Durante a Virada, diversos serviços oferecerão a opção de pagamento através do aplicativo. Editando seu perfil é possivel cadastrar seu cartão de crédito. Ao fazer uma compra pelo app, o vendedor enviará uma solicitação de pagamento direto para seu celular, que aparecerá como uma grande notificação: clique no botão verde para pagar ou no X vermelho para cancelar a compra. Fácil assim!
                     </p>
                 </details>
 
@@ -227,7 +264,8 @@
                    checkPrivacy(element);
                })
             });
-        })();
+        })();    
+
     </script>
 </div>
 </body>
