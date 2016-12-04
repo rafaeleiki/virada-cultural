@@ -163,7 +163,8 @@
 }
 
 .cc-number{
-    width: 20%;
+    display: inline-block;
+    width: 20% !important;
     color: darkgray;
     font-weight: bold;
     border-radius:3px;
