@@ -1,0 +1,63 @@
+<html>
+<head>
+    <title>Virada Cultural</title>
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <!-- Evitar problemas com caracteres latinos -->
+    <meta charset="UTF-8">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link type="text/css" rel="stylesheet" href="../ratchet-2.0.2/dist/css/ratchet.min.css"/>
+    <script src="../ratchet-2.0.2/dist/js/ratchet.min.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css" />
+
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/mapa.css" />
+    <link rel="stylesheet" href="css/pagamento.css" />
+    <link rel="stylesheet" href="css/panico.css" />
+    <link type="text/css" rel="stylesheet" href="css/componentes.css" />
+
+    <script src="../js/notification.js"></script>
+</head>
+
+<body>
+<header class="bar bar-nav">
+    <a class="icon icon-left-nav pull-left" style="color:white" onclick="history.back();"></a>
+    <a href="#modalAjuda" class="icon pull-right">
+        <span class="fa fa-question" style="color: white;"></span>
+    </a>
+    <h1 class="title">Urgente</h1>
+</header>
+<div class="content">
+
+    <button id="menu-trigger" class="menu-trigger"><span class="fa fa-circle"></span></button>
+
+    <div class="panic-container">
+        <button id="ambulance"><span class="panic-icon fa fa-ambulance"></span>Ambulância</button>
+        <button id="police"><span class="panic-icon fa fa-shield"></span>Polícia</button>
+    </div>
+
+    <script class="js-custom">
+        function call(text) {
+            Notification.show(`A ${text} foi chamada para sua posição atual`);
+        }
+
+        document.getElementById('ambulance').addEventListener('touchend', function () {
+           call('ambulância');
+        });
+
+        document.getElementById('police').addEventListener('touchend', function () {
+            call('polícia');
+        });
+    </script>
+</div>
+</body>
+</html>
+<script src="../js/os.js"></script>
+<script src="../js/menu.js"></script>

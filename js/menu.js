@@ -51,14 +51,19 @@ var MenuController = (function() {
             itemsList.appendChild(this.createItem('menu-i-graffiti', 'grafitti'));
             itemsList.appendChild(this.createItem('menu-i-planning', 'planejador'));
             itemsList.appendChild(this.createItem('menu-i-friends', 'amigos'));
+            itemsList.appendChild(this.createItem('menu-i-panic', 'pânico', 'panico'));
         },
 
-        createItem: function (className, pageName) {
+        createItem: function (className, linkName, pageName) {
             var item = document.createElement('li');
             item.className = 'menu-item ' + className;
 
-            var link = '<a href="/virada-cultural/pages/#name#.html" class="menu-link" data-transition="slide-in">#name#</a>';
-            link = link.replace(/#name#/g, pageName);
+            if (!pageName) {
+                pageName = linkName;
+            }
+
+            var link = `<a href="/virada-cultural/pages/${pageName}.html" 
+                           class="menu-link" data-transition="slide-in">${linkName}</a>`;
             item.innerHTML = link;
 
             return item;

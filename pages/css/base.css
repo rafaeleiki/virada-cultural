@@ -223,6 +223,15 @@
     margin-left: -1em;
 }
 
+.menu-i-panic {
+    background-color: #e6000c;
+    margin: -222px auto auto;
+}
+
+.menu-i-panic .menu-link {
+    margin-left: -0.5em;
+}
+
 /* Utilidade */
 .block {
     display: block;
