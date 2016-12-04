@@ -242,3 +242,8 @@
 .bold {
     font-weight: bold;
 }
+
+.text-link {
+    text-decoration: underline blue !important;
+    color: #428bca !important;
+}
