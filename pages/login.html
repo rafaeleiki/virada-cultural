@@ -32,6 +32,7 @@
 <body>
 <header class="bar bar-nav">
     <h1 class="title">Virada Cultural</h1>
+    <a class="icon pull-right" href="#modalAjuda"><span class="fa fa-question" style="color: white;"></span></a>
 </header>
 <div class="content home-content">
     <button id="menu-trigger" class="menu-trigger"><span class="fa fa-circle"></span></button>
@@ -48,6 +49,45 @@
         </form>
 
         <button class="btn btn-block">Problemas para entrar?</button>
+    </div>
+
+    <!-- Ajuda -->
+    <div id="modalAjuda" class="modal">
+        <header class="bar bar-nav help-nav">
+            <a class="icon icon-close pull-right" href="#modalAjuda"></a>
+            <h1 class="title">Ajuda</h1>
+        </header>
+        <div class="content">
+            <div class="help-content">
+                <details>
+                    <summary>Como funciona o login / entrar no app?</summary>
+                    <p>
+                        Fazer o login / entrar no app permite que você utilize as
+                        informações salvas do seu cadastro para as funcionalidades
+                        do sistema. Seus dados são mantidos seguros e somem do seu
+                        dispositivo após você realizar logout / sair do sistema.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>Meus dados são divulgados?</summary>
+                    <p>
+                        Os dados do seu cronograma são usados de forma anônima
+                        para fins logísticos. Seus demais dados só são disponíveis
+                        de forma pública se você desejar. Você pode configurar isso
+                        no seu perfil.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>Posso usar o aplicativo sem login / entrar no sistema?</summary>
+                    <p>
+                        Sim, porém você terá restrições no seu uso.
+                    </p>
+                </details>
+
+            </div>
+        </div>
     </div>
 
     <script class="js-custom">
